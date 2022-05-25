@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from 'pages/Home';
+import About from 'pages/About';
 import { useNavigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BaseLayout from 'layouts/BaseLayout';
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ root.render(
         <Routes>
             <Route path='/' element={ <BaseLayout /> }>
                 <Route index element={ <Home /> } />
+                <Route path='/about' element={ <About /> } />
             </Route>
         </Routes>
     </Router>
