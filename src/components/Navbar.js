@@ -17,6 +17,7 @@ export function Navbar() {
         <div className='navbar'>
             <div className='navbar__items'>
                 <img src={ qfLogo } className='navbar__item-logo' />
+                <NavItem to='/' text='Home' />
                 <NavItem to='/about' text='About' />
                 <NavItem to='/hunts' text='Hunts' />
                 <NavItem to='/training' text='Training' />
