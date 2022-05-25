@@ -1,0 +1,60 @@
+@import 'styles/qf';
+
+@mixin showcase_card-base {
+    display: grid;
+    width: 100%;
+}
+
+.showcase_card {
+    @include showcase_card-base;
+    grid-template-columns: [img-start] 48% 4% [text-start] 48%;
+
+    &-reversed {
+        @include showcase_card-base;
+        grid-template-columns: [text-start] 48% 4% [img-start] 48%;
+    }
+
+    &__img {
+        grid-column-start: img-start;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    &__text {
+        &__container {
+            grid-column-start: text-start;
+            grid-column-end: span 1;
+            grid-row-start: 1;
+            color: $dark-grey;
+            width: 80%;
+            height: 100%;
+        }
+        
+        &__header {
+            line-height: 1;
+            margin: 0;
+            margin-bottom: 1rem;
+            font-family: $primary-font;
+            font-weight: 400;
+            font-size: 3rem;
+        }
+
+        &__body {
+            font-size: 1rem;
+            margin: 0;
+            font-family: $secondary-font;
+            line-height: 2;
+        }
+
+        &__link {
+            font-size: 1rem;
+            color: $orange;
+            margin: 0;
+            margin-top: 2rem;
+            display: block;
+            font-family: $primary-font;
+        }
+    }
+}
