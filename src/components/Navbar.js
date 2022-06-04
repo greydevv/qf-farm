@@ -12,9 +12,9 @@ function NavItemSet({ children }) {
 function NavItem({ text, ...rest }) {
     
     const makeClsName = (isActive) => {
-        const baseClasses = 'font-1 text-dark text-center font-normal my-auto h-100';
+        const baseClasses = 'font-2 text-qf-white text-center font-normal my-auto';
         if (isActive) {
-            return `${baseClasses} underline decoration-orange decoration-2`
+            return `${baseClasses} underline decoration-qf-white decoration-2`
         }
         return baseClasses
     }
@@ -28,14 +28,14 @@ function NavItem({ text, ...rest }) {
 
 export function Navbar() {
     return (
-        <div className='py-1.5 px-8 flex flex-row justify-between bg-grey border-b-4 border-orange'>
+        <div className='py-8 px-8 flex flex-row justify-between bg-qf-brown'>
             <NavItemSet>
-                <img src={ qfLogo } alt='qf-logo' />
                 <NavItem to='/' text='Home' />
                 <NavItem to='/about' text='About' />
                 <NavItem to='/hunts' text='Hunts' />
                 <NavItem to='/training' text='Training' />
                 <NavItem to='/contact' text='Contact' />
+                <NavItem to='/admin' text='Admin' />
             </NavItemSet>
             <NavItemSet>
                 <NavItem to='/login' text='log in' />

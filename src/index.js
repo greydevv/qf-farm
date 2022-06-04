@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import Home from 'pages/Home';
 import About from 'pages/About';
 import Hunts from 'pages/Hunts';
+import Admin from 'pages/Admin';
+import Training from 'pages/Training';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BaseLayout from 'layouts/BaseLayout';
 import reportWebVitals from './reportWebVitals';
@@ -16,7 +18,9 @@ root.render(
                 <Route index element={ <Home /> } />
                 <Route path='/about' element={ <About /> } />
                 <Route path='/hunts' element={ <Hunts /> } />
+                <Route path='/training' element={ <Training /> } />
             </Route>
+            <Route path='/admin' element={ <Admin /> } />
         </Routes>
     </Router>
 );
