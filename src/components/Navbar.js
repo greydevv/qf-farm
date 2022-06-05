@@ -46,7 +46,7 @@ export function Navbar() {
 
     const ToggleButton = () => {
         return (
-            <button className='h-[28px] w-[28px] text-qf-white' onClick={ toggleMenu} >
+            <button className='desktop:hidden h-[28px] w-[28px] text-qf-white' onClick={ toggleMenu} >
                 { menuOpen ? 'CLOSE' : 'OPEN' }
             </button>
         )
@@ -54,7 +54,7 @@ export function Navbar() {
 
     const NavItems = () => {
         return (
-            <div className='flex desktop:flex-row flex-col justify-between h-full'>
+            <div className='flex desktop:flex-row flex-col justify-between h-full w-full'>
                 <NavItemSet>
                     <NavItem to='/' text='Home' />
                     <NavItem to='/about' text='About' />
@@ -79,7 +79,7 @@ export function Navbar() {
                     <NavItems />
                 </div>
             </div>
-            <div className={ (menuOpen ? 'nav-open' : 'nav-closed') + ' z-[9999] transition-transform ease-out fixed top-0 left-0 bottom-0 w-[80vw] h-screen bg-qf-brown' }>
+            <div className={ (menuOpen ? 'nav-open' : 'nav-closed') + ' z-[9999] desktop:hidden transition-transform ease-out fixed top-0 left-0 bottom-0 w-[80vw] h-screen bg-qf-brown' }>
                 <div className='flex flex-col h-full gap-6 pb-12'>
                     <div className={ navBarCls }>
                         <div className='h-full my-auto'>
