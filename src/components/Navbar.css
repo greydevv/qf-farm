@@ -1,0 +1,9 @@
+.nav {
+    &-open {
+        transform: none;
+    }
+
+    &-closed {
+        transform: translateX(-100%);
+    }
+}
