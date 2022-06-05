@@ -18,8 +18,8 @@ module.exports = {
             '2': ['Roboto', 'sans-serif'],
         },
         screens: {
-            'phone': {'max': '640px'},
-            'desktop': {'max': '1024px'}
+            'phone': '640px',
+            'desktop': '1024px'
         },
         configViewer: {
         // ... configViewer Options
