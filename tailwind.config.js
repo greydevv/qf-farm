@@ -4,12 +4,13 @@ module.exports = {
     ],
     theme: {
         colors: {
-            'orange': '#f09155',
+            'qf-orange': '#f09155',
             'dark': '#312923',
             'dark-grey': '#656565',
             'grey': '#f7f7f7',
             'qf-brown': '#351f08',
             'qf-white': '#f7f7f7',
+            'qf-light-grey': '#dfdfdf',
             'qf-black': '#231302',
             'qf-grey': '#9e9e9e',
         },
