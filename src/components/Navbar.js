@@ -72,7 +72,7 @@ export function Navbar() {
     }
 
     return (
-        <div>
+        <div className='w-screen'>
             <div className={ navBarCls }>
                 <ToggleButton />
                 <div className='desktop:flex hidden'>

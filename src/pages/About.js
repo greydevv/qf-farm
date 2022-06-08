@@ -2,14 +2,7 @@ import ShowcaseCard from 'components/ShowcaseCard';
 import cristin from 'assets/images/about/cristin.jpg';
 import brandt from 'assets/images/about/brandt.jpg';
 import about from 'assets/images/about/about.jpg';
-
-const bodyCls = (extra) => {
-    const base = 'text-qf-grey leading-8 font-light'
-    if (extra) {
-        return `${base} ${extra}`
-    }
-    return base
-}
+import { bodyCls } from 'Const';
 
 function Profile({ name, bio, img }) {
     return (
@@ -47,7 +40,7 @@ function DogProfile({ name, bio, img }) {
 
 export default function About() {
     return (
-        <div className='desktop:px-40 desktop:my-20 mb-5 flex flex-col gap-20'>
+        <div className='desktop:px-40 desktop:my-20 pb-5 flex flex-col gap-20'>
             <div className='flex desktop:flex-row flex-col desktop:gap-10 gap-6'>
                 <div className='desktop:w-1/2 desktop:px-0 px-6 text-left'>
                     <h1 className='w-full font-1 desktop:text-5xl text-3xl desktop:mb-4 mb-2 font-normal text-qf-black'>
