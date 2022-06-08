@@ -1,6 +1,6 @@
 import ShowcaseCard from 'components/ShowcaseCard';
 import FeatureCard from 'components/FeatureCard';
-import homeBanner from 'assets/images/home/field.jpg';
+import field from 'assets/images/home/field.jpg';
 import huntsThumb from 'assets/images/home/hunts_thumb.jpg';
 import trainingThumb from 'assets/images/home/training_thumb.jpg';
 import { ZStack, ZStackElement } from 'components/ZStack';
@@ -26,7 +26,7 @@ const showcaseData = [
 
 export default function Home() {
     return (
-        <div className='home'>
+        <div className='w-screen'>
             {/*
             <ZStack className='w-full h-3/5'>
                 <ZStackElement className='w-full h-full'>
@@ -42,16 +42,27 @@ export default function Home() {
                 </ZStackElement>
             </ZStack>
             */}
-            <div className='px-40 my-20 w-full box-border h-[40vh]'>
-              <div className='mx-auto max-w-[700px] text-center'>
-                <h1 className='text-qf-black mb-4 text-2xl font-medium tracking-widest font-1'>WELCOME TO QUILL FEATHER FARM</h1>
-                <p className='text-qf-grey text-base leading-8 font-2 mx-15'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
+            <div className='grid place-content-center w-screen'>
+                <div className='w-full row-start-1 row-end-1 col-start-1 col-end-1'>
+                    <img src={ field } className='h-full object-cover' />
+                </div>
+                <div className='desktop:px-40 desktop:text-left text-center px-6 text-qf-white my-auto font-normal row-start-1 row-end-1 col-start-1 col-end-1'>
+                    <h1 className='font-1 tracking-[0.2em] desktop:text-6xl text-2xl desktop:mb-6'>QUILL FEATHER FARM</h1>
+                    <h4 className='font-2 tracking-[0.4em] desktop:text-2xl text-sm font-thin'>EST 2021</h4> 
+                </div>
             </div>
-            <div className='flex flex-row justify-center px-40 pb-20 gap-8 mx-auto w-full'>
-                { showcaseData.map((e, i) => <FeatureCard { ...e } key={ i } /> )}
+            <div className='desktop:px-40 px-6 pt-20 w-full pb-5 flex flex-col gap-20'>
+                <div className='w-full box-border'>
+                  <div className='w-full text-center'>
+                    <h1 className='tracking-widest font-1 desktop:text-3xl text-2xl mb-4 font-normal text-qf-black'>WELCOME TO QUILL FEATHER FARM</h1>
+                    <p className='text-qf-grey leading-8 font-light'>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div className='flex desktop:flex-row flex-col justify-center gap-6 mx-auto w-full'>
+                    { showcaseData.map((e, i) => <FeatureCard { ...e } key={ i } /> )}
+                </div>
             </div>
         </div>
     );
