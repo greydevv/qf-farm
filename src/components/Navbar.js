@@ -1,24 +1,19 @@
-import { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import qfLogo from 'assets/images/qf_logo.svg';
+import { useState, useEffect } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
+import { ReactComponent as QfLogo } from 'assets/images/qf/logo.svg'
+import { ReactComponent as Menu } from 'assets/images/qf/menu.svg'
+import { ReactComponent as Close } from 'assets/images/qf/close.svg'
+import { navLinks } from 'Const'
 import 'components/Navbar.css';
-
-function NavItemSet({ children }) {
-    return (
-        <div className='flex desktop:flex-row flex-col desktop:gap-6 gap-2'>
-            { children }
-        </div>
-    );
-}
 
 function NavItem({ text, ...rest }) {
     
     const makeClsName = (isActive) => {
-        const baseClasses = 'font-2 text-qf-white font-normal my-auto desktop:text-center text-left';
+        const baseClasses = 'qf__body my-auto font-xs font-medium';
         if (isActive) {
-            return `${baseClasses} underline decoration-qf-white decoration-2`
+            return `${baseClasses} text-qf-orange`
         }
-        return baseClasses
+        return `${baseClasses} text-qf-light-brown`
     }
 
     return (
@@ -29,7 +24,6 @@ function NavItem({ text, ...rest }) {
 }
 
 export function Navbar() {
-
     const [menuOpen, setMenuOpen] = useState(false);
     const { pathname } = useLocation();
 
@@ -39,55 +33,50 @@ export function Navbar() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen)
-        console.log(menuOpen)
-    }
-
-    const navBarCls = 'bg-qf-brown p-6'
-
-    const ToggleButton = () => {
-        return (
-            <button className='desktop:hidden h-[28px] w-[28px] text-qf-white' onClick={ toggleMenu} >
-                { menuOpen ? 'CLOSE' : 'OPEN' }
-            </button>
-        )
     }
 
     const NavItems = () => {
         return (
             <div className='flex desktop:flex-row flex-col justify-between h-full w-full'>
-                <NavItemSet>
-                    <NavItem to='/' text='Home' />
-                    <NavItem to='/about' text='About' />
-                    <NavItem to='/hunts' text='Hunts' />
-                    <NavItem to='/training' text='Training' />
-                    <NavItem to='/contact' text='Contact' />
-                    <NavItem to='/admin' text='Admin' />
-                </NavItemSet>
-                <NavItemSet>
-                    <NavItem to='/login' text='log in' />
-                    <NavItem to='/register' text='sign up' />
-                </NavItemSet>
+                <div className='flex desktop:flex-row desktop:text-center flex-col desktop:gap-6 gap-2'>
+                    { navLinks.map((e, i) => {
+                        return <NavItem key={ i } { ...e } />
+                    })}
+                </div>
             </div>
         )
     }
 
+    const isIndex = () => pathname === '/'
+
+    const navBarCls = () => {
+        let cls = 'desktop:px-40 px-6 bg-qf-dark-brown h-20 flex items-center shadow-sm justify-between'
+        const addCls = (extra) => {
+            if (extra.length > 0) {
+                cls += ' ' + extra
+            }
+            return cls
+        }
+        return cls
+    }
+
     return (
-        <div className='w-screen'>
-            <div className={ navBarCls }>
-                <ToggleButton />
+        <div className='sticky top-0 z-[9999] w-full h-20'>
+            <div className={ navBarCls() }>
+                <NavLink to='/' className='w-[60px] h-[60px] text-qf-light-brown'>
+                    <QfLogo />
+                </NavLink>
+                <button className='desktop:hidden h-[20px] w-[20px] fill-qf-light-brown text-left font-bold text-lg' onClick={ toggleMenu }>
+                    { menuOpen ? <Close /> : <Menu /> }
+                </button>
                 <div className='desktop:flex hidden'>
                     <NavItems />
                 </div>
             </div>
-            <div className={ (menuOpen ? 'nav-open' : 'nav-closed') + ' z-[9999] desktop:hidden transition-transform ease-out fixed top-0 left-0 bottom-0 w-[80vw] h-screen bg-qf-brown' }>
-                <div className='flex flex-col h-full gap-6 pb-12'>
-                    <div className={ navBarCls }>
-                        <div className='h-full my-auto'>
-                            <ToggleButton />
-                        </div>
-                    </div>
+            <div className={ (menuOpen ? 'nav-open' : 'nav-closed') + ' z-[9999] desktop:hidden transition-transform ease-out fixed top-20 right-0 bottom-0 w-[50vw] h-screen bg-qf-white desktop:text-left text-right' }>
+                <div className='flex flex-col bg-qf-dark-brown h-full gap-12 pb-12'>
                     <div className='h-full px-6'>
-                    <NavItems />
+                        <NavItems />
                     </div>
                 </div>
             </div>

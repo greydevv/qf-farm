@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .qf__header {
+        @apply text-qf-black font-1 desktop:text-5xl text-3xl desktop:mb-4 mb-2;
+    }
+
+    .qf__header-1 {
+        @apply text-qf-black font-1 text-3xl desktop:mb-4 mb-2;
+    }
+
+    .qf__body {
+        @apply text-qf-grey font-light text-sm desktop:leading-5;
+    }
+}
