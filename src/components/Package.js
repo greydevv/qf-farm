@@ -8,7 +8,7 @@ import bootcamp_thumb from 'assets/images/train/bootcamp_thumb.jpg'
 import { ReactComponent as Back } from 'assets/images/qf/back.svg'
 import { ReactComponent as DisclaimerIcon } from 'assets/images/qf/disclaimer.svg'
 import { ReactComponent as ChevronDown } from 'assets/images/qf/chevron_down.svg'
-import { Document, Page } from 'react-pdf'
+// import { Document, Page } from 'react-pdf'
 import { NavLink } from 'react-router-dom'
 import pdf from 'assets/images/qf/lease.pdf'
 import { 
@@ -70,9 +70,11 @@ export function PackageList() {
 
     return (
         <div className='desktop:px-40 px-6 desktop:py-24 py-10 bg-qf-dark-brown flex flex-col gap-6'>
+        {/*
             <Document file={ pdf }>
-                <Page pageNumber={ 0 } />
+            <Page pageNumber={ 0 } />
             </Document>
+        */}
             <div className='flex desktop:flex-row flex-col desktop:justify-between desktop:pb-10'>
                 { Object.keys(trainingPackages).map((category, i) => {
                     let cls = 'font-1 desktop:text-3xl text-2xl cursor-pointer'
