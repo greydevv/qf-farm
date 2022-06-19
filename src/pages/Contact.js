@@ -29,7 +29,7 @@ export default function Contact() {
     }
 
     const getCaptchaUrl = (token) => {
-        const secKey = process.env.REACT_APP_CAPTCHA_SEC_KEY_TEST
+        const secKey = process.env.REACT_APP_CAPTCHA_SEC_KEY
         return `https://www.google.com/recaptcha/api/siteverify?secret=${secKey}&response=${token}`
     }
 
@@ -109,7 +109,7 @@ export default function Contact() {
                     </QfButton>
                     { showCaptcha &&
                         <ReCAPTCHA
-                            sitekey={ process.env.REACT_APP_CAPTCHA_SITE_KEY_TEST }
+                            sitekey={ process.env.REACT_APP_CAPTCHA_SITE_KEY }
                             onChange={ onCaptchaChange }
                             onErrored={ onCaptchaError }
                         />
