@@ -4,7 +4,7 @@ import { ReactComponent as QfLogo } from 'assets/images/qf/logo.svg'
 import { ReactComponent as Menu } from 'assets/images/qf/menu.svg'
 import { ReactComponent as Close } from 'assets/images/qf/close.svg'
 import { navLinks } from 'Const'
-import 'components/Navbar.css';
+import 'components/Navbar.css'
 
 function NavItem({ text, ...rest }) {
     
