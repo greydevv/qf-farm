@@ -7,7 +7,7 @@ export default function Hunts() {
             <PageHero
                 headerText='HUNT'
                 bodyText='Please check back regularly as we prepare to offer guided hunts for individuals, groups, and corporate outings. Press the link below and enter your email to be the first to know when we launch!'
-                img={ process.env.S3_BUCKET_NAME + '/hunt/hunt.jpg' }
+                img={ process.env.REACT_APP_S3_BUCKET_NAME + 'hunt/hunt.jpg' }
                 comingSoonText='FALL 2022'
             />
         </div>
