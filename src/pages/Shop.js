@@ -1,5 +1,7 @@
-import hunt from 'assets/images/hunt/hunt.jpg'
 import PageHero from 'components/PageHero'
+import { PackageList } from 'components/Package'
+import { shopPackages } from 'Const'
+import hunt from 'assets/images/hunt/hunt.jpg'
 
 export default function Shop() {
     return (
@@ -10,6 +12,7 @@ export default function Shop() {
                 img={ hunt }
                 comingSoonText='SOON'
             />
+            <PackageList packageSet={ shopPackages } />
         </div>
     )
 }

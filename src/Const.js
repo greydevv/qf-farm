@@ -1,9 +1,3 @@
-import train_thumb from 'assets/images/train/train_thumb.jpg'
-import hunt_thumb from 'assets/images/hunt/hunt_thumb.jpg'
-import shop_thumb from 'assets/images/shop/shop_thumb.jpg'
-import individual_thumb from 'assets/images/train/individual_thumb.jpg'
-import group_thumb from 'assets/images/train/group_thumb.jpg'
-import bootcamp_thumb from 'assets/images/train/bootcamp_thumb.jpg'
 import { ReactComponent as PhoneIcon } from 'assets/images/qf/phone.svg'
 import { ReactComponent as EmailIcon } from 'assets/images/qf/email.svg'
 import { ReactComponent as FbIcon } from 'assets/images/qf/facebook.svg'
@@ -56,28 +50,28 @@ export const contactInfo = {
 
 export const mainFeatures = [
     {
-        img: hunt_thumb,
+        img: process.env.REACT_APP_S3_BUCKET_NAME + 'hunt/hunt_thumb.jpg',
         titleText: 'hunt',
         bodyText: 'Hunt pheasant, chukar, and quail on guided hunts across our seventy acre field.',
         to: '/hunt',
     },
     {
-        img: train_thumb,
+        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/train_thumb.jpg',
         titleText: 'train',
-        bodyText: "Send your pups to our overnight bootcamp while you're away. blah blah  other shit about training.",
+        bodyText: 'Build a better gun dog through unique and tailored training opportunities.',
         to: '/train',
     },
     {
-        img: shop_thumb,
-        titleText: 'studio',
-        bodyText: 'Shop our art studio and apparel and view our products of choice for all things gun dog.',
+        img: process.env.REACT_APP_S3_BUCKET_NAME + 'shop/shop_thumb.jpg',
+        titleText: 'shop',
+        bodyText: 'Browse our selection of original artwork, apparel, and gifts.',
         to: '/shop',
     }
 ];
 
 export const trainingPackages = {
     individual: {
-        img: individual_thumb,
+        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/individual_thumb.jpg',
         packages: [
             {
                 headerText: 'EVALUATION',
@@ -100,7 +94,7 @@ export const trainingPackages = {
         ]
     },
     group: {
-        img: group_thumb,
+        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/group_thumb.jpg',
         packages: [
             {
                 headerText: 'FOUNDATION OBEDIENCE',
@@ -110,7 +104,36 @@ export const trainingPackages = {
         ]
     },
     bootcamp: {
-        img: bootcamp_thumb,
+        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/bootcamp_thumb.jpg',
+        packages: []
+    }
+}
+
+export const shopPackages = {
+    artwork: {
+        packages: [
+            {
+                headerText: 'PREENING MALLARD',
+                bodyText: 'Print, framed.',
+                price: '$150.00',
+            },
+            {
+                headerText: 'PREENING WOOD-DUCK',
+                bodyText: 'Print, framed.',
+                price: '$150.00',
+            },
+            {
+                headerText: 'CHUKAR',
+                bodyText: 'Print, framed.',
+                price: '$150.00',
+            },
+        ]
+    },
+    merch: {
+        packages: [
+        ]
+    },
+    portraits: {
         packages: []
     }
 }

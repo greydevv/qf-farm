@@ -3,7 +3,6 @@ import FeatureCardList from 'components/FeatureCardList';
 import PageHero from 'components/PageHero'
 import { PackageList } from 'components/Package'
 import { trainingPackages } from 'Const'
-import train from 'assets/images/train/train.jpg'
 
 export default function Train() {
     return (
@@ -11,10 +10,10 @@ export default function Train() {
             <PageHero
                 headerText='TRAIN'
                 bodyText='There is no substitute for a well-trained gun dog. At Quill Feather Farm we understand this necessity and offer a variety of unique and tailored training opportunities to help you get the most out of your pointing dog. We cater to the versatile hunting dog by offering both upland and waterfowl training.'
-                img={ train }
+                img={ process.env.REACT_APP_S3_BUCKET_NAME + 'train/train.jpg' }
             
             />
-            <PackageList />
+            <PackageList packageSet={ trainingPackages } />
         </div>
     );
 }

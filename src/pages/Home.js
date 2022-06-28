@@ -1,6 +1,5 @@
 import ShowcaseCard from 'components/ShowcaseCard';
 import FeatureCardList from 'components/FeatureCardList';
-import field from 'assets/images/home/field.jpg';
 import { mainFeatures } from 'Const';
 import { NavLink } from 'react-router-dom';
 
@@ -9,7 +8,7 @@ import 'pages/Home.css';
 export default function Home() {
 
     const splashImgStyle = {
-        backgroundImage: `url(${field})`,
+        backgroundImage: `url(${process.env.REACT_APP_S3_BUCKET_NAME + 'home/field.jpg'})`,
         backgroundSize: 'cover',
         backgroundPosition: 'bottom',
     }
