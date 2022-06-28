@@ -93,7 +93,7 @@ export default function Contact() {
                     />
                     <div className='mx-auto max-w-min'>
                         <ReCAPTCHA
-                            sitekey={ process.env.REACT_APP_CAPTCHA_SITE_KEY_TEST }
+                            sitekey={ process.env.REACT_APP_CAPTCHA_SITE_KEY }
                             onChange={ onCaptchaChange }
                             onErrored={ onCaptchaError }
                         />
