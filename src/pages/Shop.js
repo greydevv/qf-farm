@@ -1,7 +1,6 @@
 import PageHero from 'components/PageHero'
 import { PackageList } from 'components/Package'
 import { shopPackages } from 'Const'
-import hunt from 'assets/images/hunt/hunt.jpg'
 
 export default function Shop() {
     return (
@@ -9,7 +8,7 @@ export default function Shop() {
             <PageHero
                 headerText='SHOP'
                 bodyText='Please check back regularly as we prepare to launch original artwork, Quill Feather apparel, and gifts. Press the link below and enter your email to be the first to know when we launch!'
-                img={ hunt }
+                img={ process.env.REACT_APP_S3_BUCKET_NAME + 'shop/shop_thumb.jpg' }
                 comingSoonText='SOON'
             />
             <PackageList packageSet={ shopPackages } />
