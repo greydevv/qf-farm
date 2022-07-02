@@ -1,39 +1,39 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { contactInfo } from 'Const'
-import { QfButton, QfInput } from 'components/shared'
-import axios from 'axios'
-import ReCAPTCHA from 'react-google-recaptcha'
-import MailchimpSubscribe from 'react-mailchimp-subscribe'
+// import { QfButton, QfInput } from 'components/shared'
+// import axios from 'axios'
+// import ReCAPTCHA from 'react-google-recaptcha'
+// import MailchimpSubscribe from 'react-mailchimp-subscribe'
 
 export default function Contact() {
-    const [ isValidEmail, setIsValidEmail ] = useState(false)
-    const [ email, setEmail ] = useState('')
-    const [ captchaComplete, setCaptchaComplete ] = useState(false)
+    // const [ isValidEmail, setIsValidEmail ] = useState(false)
+    // const [ email, setEmail ] = useState('')
+    // const [ captchaComplete, setCaptchaComplete ] = useState(false)
 
-    const onEmailInputChange = (text) => {
-        setIsValidEmail(validateEmail(text))
-        setEmail(text)
-    }
+    // const onEmailInputChange = (text) => {
+    //     setIsValidEmail(validateEmail(text))
+    //     setEmail(text)
+    // }
 
-    const onCaptchaChange = async (value) => {
-        setCaptchaComplete(true)
-    }
+    // const onCaptchaChange = async (value) => {
+    //     setCaptchaComplete(true)
+    // }
 
-    const onCaptchaError = () => {
-        setCaptchaComplete(false)
-    }
+    // const onCaptchaError = () => {
+    //     setCaptchaComplete(false)
+    // }
 
-    const validateEmail = (text) => {
-        const re = new RegExp('[a-zA-Z0-9_\\.\\+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-\\.]+')
-        return text.match(re) !== null
-    }
+    // const validateEmail = (text) => {
+    //     const re = new RegExp('[a-zA-Z0-9_\\.\\+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-\\.]+')
+    //     return text.match(re) !== null
+    // }
 
-    const notifyClicked = (subscribeCallback) => {
-        if (!isValidEmail || !captchaComplete) {
-            return
-        }
-        subscribeCallback({'EMAIL': email})
-    }
+    // const notifyClicked = (subscribeCallback) => {
+    //     if (!isValidEmail || !captchaComplete) {
+    //         return
+    //     }
+    //     subscribeCallback({'EMAIL': email})
+    // }
 
     return (
         <div className='desktop:pt-10 desktop:px-40 desktop:pb-10 pt-0 flex desktop:flex-row flex-col gap-20'>
@@ -56,6 +56,7 @@ export default function Contact() {
                     })}
                 </div>
             </div>
+            {/*
             <div className='flex flex-col gap-10 w-full desktop:rounded px-6 desktop:py-24 py-16 bg-qf-dark-brown'>
                 <h1 className='qf__header-1 text-qf-white text-center'>JOIN OUR MAILING LIST</h1>
                 <div className='desktop:max-w-[800px] desktop:mx-auto'>
@@ -100,6 +101,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            */}
         </div>
     )
 }
