@@ -69,6 +69,14 @@ export const mainFeatures = [
     }
 ];
 
+const makePackageLink = (name, verbiage) => {
+    const mailToObj = {
+        subject: `${name}: Sign Up`,
+        body: encodeURIComponent(`I'm interested in signing up for ${verbiage}! Please send me more information.\n\n\nName: \nPhone: `)
+    }
+    return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+}
+
 export const trainingPackages = {
     individual: {
         img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/individual_thumb.jpg',
@@ -77,6 +85,9 @@ export const trainingPackages = {
                 headerText: 'EVALUATION',
                 bodyText: 'A mandatory precursor to any individual program. Having an understanding of where you and your dog are is an imperative step to building a successful training program.',
                 price: '$100.00',
+                leftLinkText: 'LEARN MORE',
+                leftLink: 'evaluation',
+                rightLink: makePackageLink('Evaluation', 'an evaluation')
             },
             {
                 headerText: 'PERSONALIZED',
@@ -84,12 +95,18 @@ export const trainingPackages = {
                 disclaimer: 'Pricing does not include birds.',
                 price: '$85.00',
                 rate: 'hr',
+                leftLinkText: 'LEARN MORE',
+                leftLink: 'personalized',
+                rightLink: makePackageLink('Personalized', 'a personalized training program')
             },
             {
                 headerText: 'WEEKEND WARRIOR',
                 bodyText: 'Drop your dog off Friday and we work with the dog Saturday, Sunday, and Monday. You return Monday evening and work with us and your dog on what we have accomplished in the past three days.',
-                disclaimer: 'Does not include birds and price may vary based on training selection.',
+                disclaimer: 'Pricing does not include birds and price may vary based on training selection.',
                 price: '$300.00',
+                leftLinkText: 'LEARN MORE',
+                leftLink: 'weekend-warrior',
+                rightLink: makePackageLink('Weekend Warrior', 'the Weekend Warrior program')
             },
         ]
     },
@@ -99,7 +116,10 @@ export const trainingPackages = {
             {
                 headerText: 'FOUNDATION OBEDIENCE',
                 bodyText: 'A four week class focusing on building the foundations of obedience.',
-                price: '$100.00'
+                price: '$100.00',
+                leftLinkText: 'LEARN MORE',
+                leftLink: 'foundation-obedience',
+                rightLink: makePackageLink('Foundation Obedience', 'the foundation obedience class')
             },
         ]
     },
@@ -109,23 +129,43 @@ export const trainingPackages = {
     }
 }
 
+const makeShopLink = (name, printNum) => {
+    const mailToObj = {
+        subject: `${name}: Purchase`,
+        body: encodeURIComponent(`I'm interested in purchasing the ${name} print #${printNum}!\n\n\nName: \nPhone: `)
+    }
+    return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+}
+
 export const shopPackages = {
     artwork: {
         packages: [
             {
                 headerText: 'PREENING MALLARD',
-                bodyText: 'Print, framed.',
+                bodyText: '“Preening Mallard” print #6/25 | framed | dimensions: 24” w x 19” h | wormwood frame with double flat black matting.',
+                disclaimer: 'Pricing does include shipping • US shipping only',
                 price: '$150.00',
+                rightLinkText: 'BUY NOW',
+                rightLink: makeShopLink('Preening Mallard', 6),
+                img: process.env.REACT_APP_S3_BUCKET_NAME + 'shop/preening_mallard.jpg'
             },
             {
                 headerText: 'PREENING WOOD-DUCK',
-                bodyText: 'Print, framed.',
+                bodyText: '“Preening Wood Duck” print #2/25 | framed | dimensions: 23” w x 19” h | rustic gray barn wood frame with double matting white over black.',
+                disclaimer: 'Pricing does include shipping • US shipping only',
                 price: '$150.00',
+                rightLinkText: 'BUY NOW',
+                rightLink: makeShopLink('Preening Wood-Duck', 2),
+                img: process.env.REACT_APP_S3_BUCKET_NAME + 'shop/preening_wood_duck.jpg'
             },
             {
                 headerText: 'CHUKAR',
-                bodyText: 'Print, framed.',
+                bodyText: '“Chukar” print #3/25 | framed | dimensions: 20” w x 25” h | rustic wood frame with double matting white over black.',
+                disclaimer: 'Pricing does include shipping • US shipping only',
                 price: '$150.00',
+                rightLinkText: 'BUY NOW',
+                rightLink: makeShopLink('Chukar', 3),
+                img: process.env.REACT_APP_S3_BUCKET_NAME + 'shop/chukar.jpg'
             },
         ]
     },
