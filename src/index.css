@@ -14,4 +14,12 @@
     .qf__body {
         @apply text-qf-grey font-light text-sm desktop:leading-5;
     }
+
+    .qf__btn {
+        @apply py-2 px-4 text-sm text-qf-white bg-qf-orange rounded;
+    }
+
+    .qf__btn--disabled {
+        @apply py-2 px-4 text-sm text-qf-white bg-qf-light-grey rounded;
+    }
 }

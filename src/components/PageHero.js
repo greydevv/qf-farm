@@ -20,9 +20,7 @@ export default function PageHero({ headerText, bodyText, img, comingSoonText, ch
                             { bodyText }
                         </p>
                     </div>
-                    { comingSoonText && 
-                        <NavLink to='/contact' className='qf__body text-qf-orange font-xs font-medium underline'>GET NOTIFIED</NavLink>
-                    }
+                    { children }
                 </div>
                 { img &&
                     <div className='h-full w-full aspect-video desktop:max-w-[500px] w-screen overflow-clip overflow-hidden desktop:rounded desktop:order-last order-first'>

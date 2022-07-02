@@ -20,8 +20,8 @@ export default function Home() {
             </div>
             <div className='desktop:px-40 px-6 w-full'>
                 <div className='w-full box-border'>
-                  <div className='mx-auto w-full border-l border-qf-light-grey desktop:px-6 px-2 desktop:pb-8 pb-4'>
-                    <p className='qf__body'>
+                  <div className='mx-auto w-full desktop:pb-8 pb-4'>
+                    <p className='text-qf-grey desktop:text-lg'>
                         Quill Feather Farm is a place for all things upland.
                         Located in a quiet nook in rural York Springs, PA,
                         Quill Feather Farm sits on 100 acres of woods, fields,
