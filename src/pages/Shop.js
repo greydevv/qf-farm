@@ -1,17 +1,75 @@
+import { useState } from 'react'
+import ProductCard from 'components/ProductCard'
 import PageHero from 'components/PageHero'
-import { PackageList } from 'components/Package'
-import { shopPackages } from 'Const'
+import PackageList from 'components/PackageList'
+import { shopPackages } from 'lookups/products'
+
+function ShopExamples({ examples }) {
+    return (
+        <div className='grid desktop:mx-auto desktop:grid-cols-[repeat(4,_1fr)] grid-cols-1 desktop:gap-6 gap-6'>
+            { examples.map((ex, i) => {
+                return (
+                    <div key={ i } className='grid grid-rows-[repeat(2,_auto)] gap-2 rounded overflow-clip overflow-hidden bg-qf-brown'>
+                        <div className='row-start-1 aspect-square'>
+                            <img className='w-full h-full object-cover' src={ process.env.REACT_APP_S3_BUCKET_NAME + ex.imgUrl } />
+                        </div>
+                        <div className='row-start-2 desktop:px-6 px-2 pb-2 h-full'>
+                            <p className='mb-auto'>{ ex.desc }</p>
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
+function ShopPackage({ pkg }) {
+    return (
+        <ProductCard
+            name={ pkg.title }
+            desc={ pkg.desc }
+            price={ pkg.price }
+            priceRate={ pkg.rate }
+            disclaimer={ pkg.disclaimer }
+            imgUrl={ pkg.imgUrl ? process.env.REACT_APP_S3_BUCKET_NAME + pkg.imgUrl : '' }
+            tall
+        >
+            <div className='w-full mt-8'>
+                <a href={ pkg.to }>
+                    { pkg.buyText || 'BUY NOW' }
+                </a>
+            </div>
+        </ProductCard>
+    )
+}
 
 export default function Shop() {
+    const [visiblePackages, setVisiblePackages] = useState(Object.values(shopPackages)[0].packages)
+    const [examples, setExamples] = useState([])
+
+    const changeCategory = (category) => {
+        setVisiblePackages(shopPackages[category].packages)
+        setExamples(shopPackages[category].examples || [])
+    }
+
     return (
-        <div className='desktop:pt-10 pt-0 pb-20 flex flex-col gap-20'>
+        <div className='desktop:pt-10 pt-0 flex flex-col gap-20'>
             <PageHero
                 headerText='SHOP'
                 bodyText='Please check back regularly as we prepare to launch original artwork, Quill Feather apparel, and gifts. Press the link below and enter your email to be the first to know when we launch!'
                 img={ process.env.REACT_APP_S3_BUCKET_NAME + 'shop/shop_thumb.jpg' }
                 comingSoonText='SOON'
             />
-            <PackageList packageSet={ shopPackages } />
+            <PackageList
+                categories={ Object.keys(shopPackages) }
+                packages={ shopPackages }
+                onChangeCategory={ changeCategory }
+            >
+                { visiblePackages.map((pkg, i) => {
+                    return <ShopPackage key={ i } pkg={ pkg } />
+                })}
+                { examples.length > 0 && <ShopExamples examples={ examples } /> }
+            </PackageList>
         </div>
     )
 }

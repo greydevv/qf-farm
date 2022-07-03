@@ -2,8 +2,8 @@ import { contactInfo } from 'Const'
 
 export default function Contact() {
     return (
-        <div className='desktop:pt-10 desktop:px-40 desktop:pb-10 pt-0'>
-            <h1 className='qf__header-1 desktop:text-left text-center mb-6'>
+        <div className='desktop:pt-10 desktop:px-40 desktop:pb-10 px-6 py-12'>
+            <h1 className='qf__header-1 text-left mb-6'>
                 GET IN TOUCH
             </h1>
             <div className='flex flex-col gap-6 desktop:mx-0 mx-auto'>
