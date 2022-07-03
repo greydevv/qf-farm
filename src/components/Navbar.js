@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { ReactComponent as QfLogo } from 'assets/images/qf/logo.svg'
-import { ReactComponent as Menu } from 'assets/images/qf/menu.svg'
-import { ReactComponent as Close } from 'assets/images/qf/close.svg'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import { navLinks } from 'Const'
 // import { useAuth0 } from '@auth0/auth0-react'
 import 'components/Navbar.css'
@@ -10,7 +10,7 @@ import 'components/Navbar.css'
 function NavItem({ text, ...rest }) {
     
     const makeClsName = (isActive) => {
-        const baseClasses = 'qf__body my-auto text-xs font-medium';
+        const baseClasses = 'qf__body my-auto text-sm font-medium tracking-wider';
         if (isActive) {
             return `${baseClasses} text-qf-orange`
         }
@@ -57,7 +57,7 @@ export function Navbar() {
         //     }
         // }
 
-        const navCls = 'flex desktop:flex-row desktop:text-center text-right flex-col desktop:gap-6 gap-2' 
+        const navCls = 'flex desktop:flex-row desktop:text-center text-right flex-col gap-6' 
 
         return (
             <div className='flex desktop:flex-row flex-col justify-between h-full w-full'>
@@ -96,8 +96,11 @@ export function Navbar() {
                 <NavLink to='/' className='w-[60px] h-[60px] text-qf-light-brown'>
                     <QfLogo />
                 </NavLink>
-                <button className='desktop:hidden h-[20px] w-[20px] fill-qf-light-brown text-left font-bold text-lg' onClick={ toggleMenu }>
-                    { menuOpen ? <Close /> : <Menu /> }
+                <button className='desktop:hidden fill-qf-light-brown text-left font-bold text-lg' onClick={ toggleMenu }>
+                    { menuOpen 
+                        ? <CloseIcon fontSize='medium' className='text-qf-light-brown' /> 
+                        : <MenuIcon fontSize='medium' className='text-qf-light-brown' />
+                    }
                 </button>
                 <div className='desktop:flex hidden'>
                     <NavItems />

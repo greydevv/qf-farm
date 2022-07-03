@@ -1,4 +1,3 @@
-import ShowcaseCard from 'components/ShowcaseCard';
 import FeatureCardList from 'components/FeatureCardList';
 import { mainFeatures } from 'Const';
 import { NavLink } from 'react-router-dom';
@@ -15,13 +14,13 @@ export default function Home() {
 
     return (
         <div className='flex flex-col desktop:gap-10 gap-6'>
-            <div className='flex bg-no-repeat desktop:px-40 px-6 text-qf-white font-normal desktop:h-[80vh] h-40' style={splashImgStyle}>
-                <h1 className='text-left font-1 tracking-[0.2em] desktop:text-6xl text-2xl mt-auto mb-6 w-full'>QUILL FEATHER FARM</h1>
+            <div className='flex bg-no-repeat desktop:px-40 px-6 desktop:h-[80vh] h-40' style={splashImgStyle}>
+                <h1 className='text-qf-white text-left font-1 tracking-[0.2em] desktop:text-6xl text-2xl mt-auto mb-6 w-full'>QUILL FEATHER FARM</h1>
             </div>
             <div className='desktop:px-40 px-6 w-full'>
                 <div className='w-full box-border'>
                   <div className='mx-auto w-full desktop:pb-8 pb-4'>
-                    <p className='text-qf-grey desktop:text-lg'>
+                    <p className='max-w-none'>
                         Quill Feather Farm is a place for all things upland.
                         Located in a quiet nook in rural York Springs, PA,
                         Quill Feather Farm sits on 100 acres of woods, fields,

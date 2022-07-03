@@ -1,6 +1,7 @@
-import { ReactComponent as PhoneIcon } from 'assets/images/qf/phone.svg'
-import { ReactComponent as EmailIcon } from 'assets/images/qf/email.svg'
-import { ReactComponent as FbIcon } from 'assets/images/qf/facebook.svg'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
+
 
 export const navLinks = [ 
     {
@@ -32,37 +33,46 @@ export const navLinks = [
 export const contactInfo = { 
     phone: {
         handle: '410-274-6077',
-        icon: <PhoneIcon />,
+        icon: <LocalPhoneIcon className='text-qf-black' />,
     },
     email: {
         handle: 'quillfeatherfarm@gmail.com',
-        icon: <EmailIcon />,
+        icon: <AlternateEmailIcon className='text-qf-black' />,
     },
     facebookFarm: {
         handle: 'Quill Feather Farm',
-        icon: <FbIcon />,
+        icon: <FacebookIcon className='text-qf-black' />,
     },
     facebookGunDogs: {
         handle: 'Quill Feather Gun Dogs',
-        icon: <FbIcon />,
+        icon: <FacebookIcon className='text-qf-black' />,
     }
 };
 
 export const mainFeatures = [
     {
-        img: process.env.REACT_APP_S3_BUCKET_NAME + 'hunt/hunt_thumb.jpg',
+        imgObj: {
+            alt: 'shotgun laying next to upland pheasants',
+            url: 'hunt/hunt_thumb.jpg',
+        },
         titleText: 'hunt',
         bodyText: 'Hunt pheasant, chukar, and quail on guided hunts across our seventy acre field.',
         to: '/hunt',
     },
     {
-        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/train_thumb.jpg',
+        imgObj: {
+            alt: 'gun dog training supplies',
+            url: 'train/train_thumb.jpg',
+        },
         titleText: 'train',
         bodyText: 'Build a better gun dog through unique and tailored training opportunities.',
         to: '/train',
     },
     {
-        img: process.env.REACT_APP_S3_BUCKET_NAME + 'shop/shop_thumb.jpg',
+        imgObj: {
+            alt: 'quill feather original merchandise and artwork',
+            url: 'shop/shop_thumb.jpg',
+        },
         titleText: 'shop',
         bodyText: 'Browse our selection of original artwork, apparel, and gifts.',
         to: '/shop',

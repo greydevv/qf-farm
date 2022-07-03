@@ -6,12 +6,12 @@ import { shopPackages } from 'lookups/products'
 
 function ShopExamples({ examples }) {
     return (
-        <div className='grid desktop:mx-auto desktop:grid-cols-[repeat(4,_1fr)] grid-cols-1 desktop:gap-6 gap-6'>
+        <div className='grid desktop:mx-auto desktop:grid-cols-[repeat(4,_1fr)] grid-cols-1 gap-6'>
             { examples.map((ex, i) => {
                 return (
                     <div key={ i } className='grid grid-rows-[repeat(2,_auto)] gap-2 rounded overflow-clip overflow-hidden bg-qf-brown'>
                         <div className='row-start-1 aspect-square'>
-                            <img className='w-full h-full object-cover' src={ process.env.REACT_APP_S3_BUCKET_NAME + ex.imgUrl } />
+                            <img className='w-full h-full object-cover' alt={ ex.imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + ex.imgObj.url } />
                         </div>
                         <div className='row-start-2 desktop:px-6 px-2 pb-2 h-full'>
                             <p className='mb-auto'>{ ex.desc }</p>
@@ -31,7 +31,7 @@ function ShopPackage({ pkg }) {
             price={ pkg.price }
             priceRate={ pkg.rate }
             disclaimer={ pkg.disclaimer }
-            imgUrl={ pkg.imgUrl ? process.env.REACT_APP_S3_BUCKET_NAME + pkg.imgUrl : '' }
+            imgObj={ pkg.imgObj }
             tall
         >
             <div className='w-full mt-8'>

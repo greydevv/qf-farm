@@ -9,11 +9,11 @@ export default function Contact() {
             <div className='flex flex-col gap-6 desktop:mx-0 mx-auto'>
                 { Object.entries(contactInfo).map(([type, info], i) => {
                     return (
-                        <div className='flex flex-row gap-6' key={ i }>
+                        <div className='flex flex-row gap-6 items-center' key={ i }>
                             <div className='h-6 w-6 fill-qf-dark-brown'>
                                 { info.icon }
                             </div>
-                            <p className='qf__body text-qf-light-brown my-auto'>
+                            <p>
                                 { info.handle }
                             </p>
                         </div>

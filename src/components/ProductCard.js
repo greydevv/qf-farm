@@ -1,17 +1,5 @@
-// import { useState } from 'react'
-// import PageHero from 'components/PageHero'
-// import { composeCls } from 'components/shared'
-// import individual_thumb from 'assets/images/train/individual_thumb.jpg'
-// import group_thumb from 'assets/images/train/group_thumb.jpg'
-// import bootcamp_thumb from 'assets/images/train/bootcamp_thumb.jpg'
 import { composeCls } from 'components/shared'
 import { NavLink } from 'react-router-dom'
-// import { 
-//     individualPackages, 
-//     groupPackages, 
-//     bootcampPackages 
-// } from 'Const'
-
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 
 function DisclaimerAlert({ text }) {
@@ -23,17 +11,17 @@ function DisclaimerAlert({ text }) {
     )
 }
 
-export default function ProductCard({ children, name, desc, price, priceRate, disclaimer, attrList, imgUrl, tall }) {
+export default function ProductCard({ children, name, desc, price, priceRate, disclaimer, attrList, imgObj, tall }) {
 
-    const gridCls = imgUrl ? 'desktop:grid-cols-[1fr_3fr]' : 'desktop:grid-cols-1'
+    const gridCls = imgObj ? 'desktop:grid-cols-[1fr_3fr]' : 'desktop:grid-cols-1'
     const imgCls = tall ? 'aspect-square' : 'aspect-[7/2]'
-    const infoCls = imgUrl ? 'desktop:col-start-2' : 'desktop:col-start-1'
+    const infoCls = imgObj ? 'desktop:col-start-2' : 'desktop:col-start-1'
 
     return (
         <div className={ composeCls(gridCls, 'grid desktop:grid-rows-0 grid-cols-0 grid-rows-[auto_1fr] bg-qf-brown rounded-sm overflow-clip overflow-hidden') }>
-            { imgUrl &&
+            { imgObj &&
                 <div className={ composeCls(imgCls, 'h-full w-full desktop:aspect-square row-start-1') }>
-                    <img src={ imgUrl } className='h-full w-full object-cover' />
+                    <img alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } className='h-full w-full object-cover' />
                 </div>
             }
             <div className={ composeCls(infoCls, 'flex flex-col justify-between desktop:px-6 px-2 desktop:pt-6 py-2 desktop:row-start-1 desktop:col-start-2 row-start-2') }>
@@ -42,7 +30,7 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
                         <h2>
                             { name }
                         </h2>
-                        <h2 className='text-qf-white'>
+                        <h2>
                             { price &&
                                 <span className='font-thin tracking-widest'>$</span>
                             }
@@ -74,10 +62,10 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
 //             <div className='flex flex-col desktop:justify-between flex-1 px-6 pt-8 pb-4'>
 //                 <div>
 //                     <div className='flex desktop:flex-row flex-col desktop:justify-between'>
-//                         <h1 className='qf__header-1 mb-0 text-qf-white'>
+//                         <h1 className='mb-0'>
 //                             { headerText }
 //                         </h1>
-//                         <h1 className='font-1 desktop:text-3xl text-xl mb-2 text-qf-white'>
+//                         <h1 className='mb-2'>
 //                             { price }
 //                             { rate &&
 //                                 <span className='text-sm font-normal text-qf-white'>

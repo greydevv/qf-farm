@@ -7,8 +7,16 @@
         @apply font-2;
     }
 
+    h1 {
+        @apply text-qf-white font-1 desktop:text-5xl text-3xl desktop:mb-4 mb-2 font-normal tracking-wide;
+    }
+
     h2 {
-        @apply text-qf-white font-1 text-xl tracking-wider;
+        @apply text-qf-white font-1 text-2xl tracking-wider font-normal;
+    }
+
+    h3 {
+        @apply text-qf-white text-xl;
     }
 
     a {
@@ -16,8 +24,13 @@
     }
 
     p {
-        @apply text-qf-grey font-light text-sm desktop:leading-5;
+        @apply text-qf-grey font-light text-sm desktop:leading-6 desktop:text-base max-w-body;
     }
+
+    .qf__body--accolade {
+        @apply text-qf-orange desktop:text-sm text-xs tracking-widest font-semibold;
+    }
+
 
     .qf__header {
         @apply text-qf-black font-1 desktop:text-5xl text-3xl desktop:mb-4 mb-2;
