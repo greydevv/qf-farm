@@ -29,7 +29,7 @@ export default function Home() {
                         birds, train your own versatile pointing dog, and shop
                         for original artwork, apparel, and gifts. Quill Feather
                         Farm is dedicated to the conservation of game,
-                        improving local habitat, and raising and training
+                        improving local habitat, and raising and training the
                         quintessential versatile hunting dog.
                     </p>
                   </div>
