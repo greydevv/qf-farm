@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer components {
+    html {
+        @apply font-2;
+    }
+
+    h2 {
+        @apply text-qf-white font-1 text-xl tracking-wider;
+    }
+
+    a {
+        @apply text-qf-orange font-light text-sm;
+    }
+
+    p {
+        @apply text-qf-grey font-light text-sm desktop:leading-5;
+    }
+
     .qf__header {
         @apply text-qf-black font-1 desktop:text-5xl text-3xl desktop:mb-4 mb-2;
     }
