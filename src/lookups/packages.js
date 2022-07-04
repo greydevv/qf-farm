@@ -82,7 +82,7 @@ export const trainingPackages = {
                 title: 'COME, SIT, STAY... WITH US',
                 desc: 'Our "Come, Sit, Stay... with Us" program combines customized training with extended stay. Choose anything from the most basic obedience to steadiness, duck search, and beyond. Create your own package: you pick the training, you pick the date, you pick the duration. Packages include everything an active gun dog needs: daily runs, swims, and a place to relax.',
                 price: 40,
-                disclaimer: 'Pricing starts at $40/day and does not include birds. Dates based on availability.',
+                disclaimer: 'Pricing starts at $40/day and does not include birds. Pricing may vary for holidays. Dates based on availability.',
                 rate: 'day',
                 imgObj: {
                     alt: '',
