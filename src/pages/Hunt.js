@@ -44,11 +44,11 @@ export default function Hunts() {
             <PageHero
                 headerText='HUNT'
                 bodyText='We are working diligently to create a unique upland experience for individuals, groups, and small corporate outings. Please check back regularly…or click the link below to join our waiting list and be the first to get notified when booking hunts is available!'
-                img={ process.env.REACT_APP_S3_BUCKET_NAME + 'hunt/hunt.jpg' }
+                imgObj={ {alt: 'pheasants after upland hunt', url: 'hunt/hunt.jpg'} }
                 comingSoonText='COMING FALL 2022'
             >
-                <div>
-                    <a className='text-qf-white font-medium tracking-wider text-center rounded py-3 px-4 bg-qf-orange' href={ mailTo }>
+                <div className='mr-auto'>
+                    <a className='text-qf-white block font-medium tracking-wider text-center rounded py-3 px-4 bg-qf-orange' href={ mailTo }>
                         JOIN WAITING LIST
                     </a>
                 </div>
