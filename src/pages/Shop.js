@@ -58,12 +58,12 @@ export default function Shop() {
                 headerText='SHOP'
                 bodyText='Please check back regularly as we prepare to launch original artwork, Quill Feather apparel, and gifts. Press the link below and enter your email to be the first to know when we launch!'
                 imgObj={ {alt: '', url: 'shop/shop_thumb.jpg'} }
-                comingSoonText='SOON'
             />
             <PackageList
                 categories={ Object.keys(shopPackages) }
                 packages={ shopPackages }
                 onChangeCategory={ changeCategory }
+                noEqualRow={ examples.length > 0 }
             >
                 { visiblePackages.map((pkg, i) => {
                     return <ShopPackage key={ i } pkg={ pkg } />

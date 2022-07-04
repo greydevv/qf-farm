@@ -8,7 +8,7 @@ const makePackageLink = (name, verbiage) => {
 
 const weekendWarriorPackage = {
     title: 'WEEKEND WARRIOR',
-    desc: 'Drop your dog off on a Friday and we work with your dog Saturday, Sunday, and Monday. When you return Monday evening, you will work with us and your dog on what we have accomplished over the past three days. This is a great option if you are struggling with a particular objective, or need help introducing a new activity.',
+    desc: 'Drop your dog off on a Friday and we work with your dog Saturday, Sunday, and Monday. When you return Monday evening, you will work with us and your dog on what we have accomplished over the past three days. This is a great option if you are struggling with a particular objective (like whoa or steadiness), or need help introducing a new activity (like tracking or duck search).',
     disclaimer: 'Pricing does not include birds and price may vary based on training selection.',
     price: 300,
     imgObj: {

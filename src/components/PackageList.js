@@ -25,13 +25,18 @@ function CategoryTab({ title, count, isActive, onClick }) {
     )
 }
 
-export default function PackageList({ children, packages, categories, onChangeCategory }) {
+export default function PackageList({ children, packages, categories, onChangeCategory, noEqualRow }) {
     const [activeCategory, setActiveCategory] = useState(categories[0])
 
     const changeCategory = (category) => {
         setActiveCategory(category)
         onChangeCategory(category)
     }
+
+    // This prevents each row from matching the tallest one. Used in
+    // shop/portraits so the acutal items don't expand to the height of the
+    // examples block.
+    const gridCls = noEqualRow ? '' : 'desktop:auto-rows-[1fr]'
 
     return (
         <div className='desktop:px-40 px-6 desktop:py-24 py-10 bg-qf-dark-brown flex flex-col gap-6'>
@@ -46,7 +51,7 @@ export default function PackageList({ children, packages, categories, onChangeCa
                     />
                 })}
             </div>
-            <div className='grid grid-cols-1 desktop:auto-rows-[1fr] gap-y-6'>
+            <div className={ composeCls(gridCls, 'grid grid-cols-1 gap-y-6') }>
                 { children }
             </div>
         </div>
