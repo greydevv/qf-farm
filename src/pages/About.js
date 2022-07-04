@@ -3,7 +3,7 @@ import { cristinBio, brandtBio } from 'Const'
 
 function Profile({ name, role, bio, imgObj }) {
     return (
-        <div className='flex desktop:flex-row flex-col desktop:gap-10 gap-6 desktop:px-0 px-6 max-w-main mx-auto'>
+        <div className='flex desktop:flex-row flex-col desktop:gap-10 desktop:gap-6 desktop:px-0 px-6 max-w-main mx-auto'>
             <div className='flex flex-col gap-6 desktop:flex-1 max-w-[300px]'>
                 <div className='desktop:h-[200px] desktop:mr-0 mr-auto desktop:aspect-square aspect-[4/3] rounded overflow-clip overflow-hidden'>
                     <img alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } className='w-full h-full object-cover' />
@@ -43,7 +43,7 @@ function DogProfile({ name, bio, imgObj, prizes }) {
 
 export default function About() {
     return (
-        <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-5 flex flex-col gap-20'>
+        <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-5 flex flex-col desktop:gap-20 gap-6'>
             <PageHero
                 headerText='ABOUT'
                 bodyText='Quill Feather Farm was established in 2021 by Cristin Q Murray and Brandt Fink Jr. as a place to share their passion for the sport of upland hunting, raising and training versatile hunting dogs, and providing unique training opprtunities to help others do the same.'
