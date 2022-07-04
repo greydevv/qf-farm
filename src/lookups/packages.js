@@ -80,7 +80,7 @@ export const trainingPackages = {
         packages: [
             {
                 title: 'COME, SIT, STAY... WITH US',
-                desc: 'Our "Come, Sit, Stay…with Us" program combines customized training with extended stay. Choose anything from the most basic obedience to steadiness and beyond. You pick the training, you pick the dates, you pick the duration. ',
+                desc: 'Our "Come, Sit, Stay... with Us" program combines customized training with extended stay. Choose anything from the most basic obedience to steadiness, duck search, and beyond. Create your own package: you pick the training, you pick the date, you pick the duration. Packages include everything an active gun dog needs: daily runs, swims, and a place to relax.',
                 price: 40,
                 disclaimer: 'Pricing starts at $40/day and does not include birds. Dates based on availability.',
                 rate: 'day',
@@ -88,7 +88,7 @@ export const trainingPackages = {
                     alt: '',
                     url: 'train/packages/come_sit_stay.jpg',
                 },
-                to: makePackageLink('Come Sit Stay With Us', 'the "Come, Sit, Stay... with Us" package')
+                to: makePackageLink('Come, Sit, Stay... with Us', 'the "Come, Sit, Stay... with Us" package')
             },
             weekendWarriorPackage
         ]

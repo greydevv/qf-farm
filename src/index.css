@@ -12,7 +12,7 @@
     }
 
     h2 {
-        @apply text-qf-white font-1 text-2xl tracking-wider font-normal;
+        @apply text-qf-white font-1 desktop:text-2xl text-xl tracking-wider font-normal;
     }
 
     h3 {

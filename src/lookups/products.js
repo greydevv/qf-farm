@@ -21,7 +21,7 @@ export const shopPackages = {
                 title: 'PREENING MALLARD',
                 desc: '"Preening Mallard" print #6/25 | framed | dimensions: 24" w x 19" h | wormwood frame with double flat black matting.',
                 price: 150,
-                disclaimer: 'Pricing does not include shipping • US shipping only',
+                disclaimer: 'Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
                     url: 'shop/preening_mallard.jpg',
@@ -32,7 +32,7 @@ export const shopPackages = {
                 title: 'PREENING WOOD-DUCK',
                 desc: '"Preening Wood Duck" print #2/25 | framed | dimensions: 23" w x 19" h | rustic gray barn wood frame with double matting white over black.',
                 price: 150,
-                disclaimer: 'Pricing does not include shipping • US shipping only',
+                disclaimer: 'Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
                     url: 'shop/preening_wood_duck.jpg',
@@ -43,7 +43,7 @@ export const shopPackages = {
                 title: 'CHUKAR',
                 desc: '"Chukar" print #3/25 | framed | dimensions: 20" w x 25" h | rustic wood frame with double matting white over black.',
                 price: 150,
-                disclaimer: 'Pricing does not include shipping • US shipping only',
+                disclaimer: 'Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
                     url: 'shop/chukar.jpg',
@@ -56,12 +56,23 @@ export const shopPackages = {
         packages: [
             {
                 title: 'PULLOVER HOODIE',
-                desc: 'Features our small logo on the front and the large logo on the back. Colored orange/safety-orange and made of cotton/polyester.',
+                desc: 'Features our small logo on the front and the large logo on the back. Colored orange/safety-orange. Materials include cotton/polyester.',
                 price: 40,
-                disclaimer: 'Pricing does not include shipping • US shipping only',
+                disclaimer: 'Color may vary from photo. We are currently awaiting a bulk shipment, individual items may not be immediately available. Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
                     url: 'shop/merch/hoodie.jpg',
+                },
+                to: makeMerchLink('Quill Feather Hoodie', 3),
+            },
+            {
+                title: 'SHORT-SLEEVE T-SHIRT',
+                desc: 'Features our small logo on the front and the large logo on the back. This item has no front pocket. Colored orange/safety-orange. Materials include cotton/polyester.',
+                price: 40,
+                disclaimer: 'Color may vary from photo. We are currently awaiting a bulk shipment, individual items may not be immediately available. Pricing does not include shipping • US shipping only.',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/t_shirt.jpg',
                 },
                 to: makeMerchLink('Quill Feather Hoodie', 3),
             },

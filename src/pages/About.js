@@ -31,10 +31,12 @@ function DogProfile({ name, bio, imgObj, prizes }) {
                 <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } />
             </div>
             <div className='flex flex-col'>
-                <h2 className='text-qf-black mb-0'>{ name }</h2>
-                <p className='qf__body--accolade'>
-                    { prizes.join(', ') }
-                </p>
+                <div className='flex mb-2 desktop:flex-col flex-row desktop:justify-start justify-between items-center'>
+                    <h2 className='text-qf-black mb-0'>{ name }</h2>
+                    <p className='qf__body--accolade'>
+                        { prizes.join(', ') }
+                    </p>
+                </div>
                 <p>{ bio }</p>
             </div>
         </div>
@@ -63,7 +65,7 @@ export default function About() {
                     imgObj={ {alt: '', url: 'about/brandt.jpg'} }
                 />
             </div>
-            <div className='max-w-main desktop:px-0 px-6 grid desktop:grid-cols-2 grid-cols-1 desktop:grid-rows-2 grid-rows-4 gap-x-6 gap-y-6 justify-center mx-auto'>
+            <div className='max-w-main desktop:px-0 px-6 grid desktop:grid-cols-2 grid-cols-1 desktop:grid-rows-2 grid-rows-4 gap-x-6 gap-y-10 justify-center mx-auto'>
                 <DogProfile 
                     name='MOLSON' 
                     bio='Our “long-tailed shorthair” is a true gentleman in the house, but a phenom in the field. He has a nose like no other dog and hops effortlessly through the field like a gazelle.' 

@@ -46,7 +46,9 @@ export default function PackageList({ children, packages, categories, onChangeCa
                     />
                 })}
             </div>
-            { children }
+            <div className='grid grid-cols-1 desktop:auto-rows-[1fr] gap-y-6'>
+                { children }
+            </div>
         </div>
     )
 }
