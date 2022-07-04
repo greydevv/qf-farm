@@ -8,7 +8,7 @@ const makePackageLink = (name, verbiage) => {
 
 const weekendWarriorPackage = {
     title: 'WEEKEND WARRIOR',
-    desc: 'Drop your dog off Friday and we work with the dog Saturday, Sunday, and Monday. You return Monday evening and work with us and your dog on what we have accomplished in the past three days.',
+    desc: 'Drop your dog off on a Friday and we work with your dog Saturday, Sunday, and Monday. When you return Monday evening, you will work with us and your dog on what we have accomplished over the past three days. This is a great option if you are struggling with a particular objective, or need help introducing a new activity.',
     disclaimer: 'Pricing does not include birds and price may vary based on training selection.',
     price: 300,
     imgObj: {
@@ -24,7 +24,7 @@ export const trainingPackages = {
         packages: [
             {
                 title: 'EVALUATION',
-                desc: 'A mandatory precursor to any individual program. Having an understanding of where you and your dog are is an imperative step to building a successful training program.',
+                desc: 'This is a mandatory precursor to any individual program. Having an understanding of where you and your dog currently are is an imperative step to building a personalized and successful training program.',
                 price: 100,
                 imgObj: {
                     alt: '',
@@ -34,7 +34,7 @@ export const trainingPackages = {
             },
             {
                 title: 'PERSONALIZED',
-                desc: "We'll take what we learn during your evaluation to define where you are. Then, taking in account where you want to go, we'll create a personalized program just for you to help get you and your dog there.",
+                desc: "Taking what we learn during your evaluation, we'll determine where you and your dog currently are. We'll combine that with your ultimate objectives to create a unique and personalized training program just for you and your dog.",
                 disclaimer: 'Pricing does not include birds.',
                 price: 85,
                 rate: 'hr',

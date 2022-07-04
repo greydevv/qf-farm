@@ -6,6 +6,14 @@ const makeShopLink = (name, printNum) => {
     return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 }
 
+const makeMerchLink = (name) => {
+    const mailToObj = {
+        subject: `${name}: Purchase`,
+        body: encodeURIComponent(`I'm interested in purchasing the ${name}! Please let me know how to proceed with payment.\n\n\nSize: \nName: \nPhone: `)
+    }
+    return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+}
+
 export const shopPackages = {
     artwork: {
         packages: [
@@ -46,7 +54,17 @@ export const shopPackages = {
     },
     merch: {
         packages: [
-            
+            {
+                title: 'PULLOVER HOODIE',
+                desc: 'Features our small logo on the front and the large logo on the back. Colored orange/safety-orange and made of cotton/polyester.',
+                price: 40,
+                disclaimer: 'Pricing does not include shipping • US shipping only',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/hoodie.jpg',
+                },
+                to: makeMerchLink('Quill Feather Hoodie', 3),
+            },
         ]
     },
     portraits: {
