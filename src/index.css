@@ -20,11 +20,19 @@
     }
 
     a {
-        @apply text-qf-orange font-light text-sm;
+        @apply text-qf-orange font-light text-sm desktop:text-base;
     }
 
     p {
         @apply text-qf-grey font-light text-sm desktop:leading-6 desktop:text-base max-w-body;
+    }
+
+    /**
+     * Highlights any spans inside of package descriptions. Used for taglines
+     * such as 'build a better gun dog'.
+     */
+    .qf__body--package > span {
+        @apply text-qf-white italic;
     }
 
     .qf__body--accolade {
