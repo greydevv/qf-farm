@@ -1,8 +1,3 @@
-import FacebookIcon from '@mui/icons-material/Facebook'
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
-
-
 export const navLinks = [ 
     {
         to: '/',
@@ -29,25 +24,6 @@ export const navLinks = [
         text: 'CONTACT',
     },
 ]
-
-export const contactInfo = { 
-    phone: {
-        handle: '410-274-6077',
-        icon: <LocalPhoneIcon className='text-qf-black' />,
-    },
-    email: {
-        handle: 'quillfeatherfarm@gmail.com',
-        icon: <AlternateEmailIcon className='text-qf-black' />,
-    },
-    facebookFarm: {
-        handle: 'Quill Feather Farm',
-        icon: <FacebookIcon className='text-qf-black' />,
-    },
-    facebookGunDogs: {
-        handle: 'Quill Feather Gun Dogs',
-        icon: <FacebookIcon className='text-qf-black' />,
-    }
-};
 
 export const mainFeatures = [
     {
