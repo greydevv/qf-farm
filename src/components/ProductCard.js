@@ -1,6 +1,7 @@
 import { composeCls } from 'components/shared'
 import { NavLink } from 'react-router-dom'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import parse from 'html-react-parser'
 
 function DisclaimerAlert({ text }) {
     return (
@@ -40,64 +41,13 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
                             }
                         </h2>
                     </div>
-                    <p className='w-full'>
-                        { desc }
+                    <p className='w-full qf__body--package'>
+                        { parse(desc) }
                     </p>
                     { disclaimer && <DisclaimerAlert text={ disclaimer } /> }
                 </div>
-                { children }
+                { parse }
             </div>
         </div>
     )
 }
-
-// function Package({ headerText, bodyText, disclaimer, price, rate, img, leftLinkText, leftLink, rightLinkText, rightLink }) {
-//     return (
-//         <div className='flex desktop:flex-row flex-col desktop:gap-6 gap-x-6 rounded-sm overflow-clip overflow-hidden bg-qf-brown'>
-//             { img &&
-//                 <div className='desktop:max-h-[250px] aspect-square overflow-clip overflow-hidden'>
-//                     <img className='w-full h-full object-cover' src={ img } />
-//                 </div>
-//             }
-//             <div className='flex flex-col desktop:justify-between flex-1 px-6 pt-8 pb-4'>
-//                 <div>
-//                     <div className='flex desktop:flex-row flex-col desktop:justify-between'>
-//                         <h1 className='mb-0'>
-//                             { headerText }
-//                         </h1>
-//                         <h1 className='mb-2'>
-//                             { price }
-//                             { rate &&
-//                                 <span className='text-sm font-normal text-qf-white'>
-//                                     { ` / ${rate}`}
-//                                 </span>
-//                             }
-//                         </h1>
-//                     </div>
-//                     { disclaimer && 
-//                         <div className='flex gap-2 items-center mb-6'>
-//                             <DisclaimerIcon className='h-4 w-4 fill-qf-orange' />
-//                             <p className='qf__body text-qf-light-brown max-w-body'>
-//                                 { ' ' + disclaimer }
-//                             </p>
-//                         </div>
-//                     }
-//                     <p className='qf__body max-w-body text-qf-light-brown my-6'>
-//                         { bodyText }
-//                     </p>
-//                 </div>
-//                 <div className='w-full flex justify-between'>
-//                     { leftLinkText &&
-//                         <NavLink to={ leftLink } className='qf__body text-qf-orange font-xs font-medium underline cursor-pointer'>
-//                             { leftLinkText }
-//                         </NavLink>
-//                     }
-//                     <a href={ rightLink } className='qf__body text-qf-orange font-xs font-medium underline'>
-//                         { rightLinkText || 'SIGN UP' }
-//                     </a> 
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
