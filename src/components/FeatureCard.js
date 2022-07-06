@@ -11,7 +11,7 @@ export default function FeatureCard({ imgObj, titleText, bodyText, to }) {
                     <h2 className='absolute left-4 top-4'>{ titleText.toUpperCase() }</h2>
                 </div>
                 <div className='desktop:flex hidden h-[118px] px-4 pt-4 pb-8'>
-                    <p className='qf__body h-full text-qf-white'>{ bodyText }</p>
+                    <p className='h-full text-qf-white'>{ bodyText }</p>
                 </div>
             </div>
         </NavLink>

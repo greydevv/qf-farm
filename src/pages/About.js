@@ -31,7 +31,7 @@ function DogProfile({ name, bio, imgObj, prizes }) {
                 <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } />
             </div>
             <div className='flex flex-col'>
-                <div className='flex mb-2 desktop:flex-col flex-row desktop:justify-start justify-between items-center'>
+                <div className='flex mb-2 desktop:flex-col flex-row desktop:justify-start justify-between desktop:items-start items-center'>
                     <h2 className='text-qf-black mb-0'>{ name }</h2>
                     <p className='qf__body--accolade'>
                         { prizes.join(', ') }

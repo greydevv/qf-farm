@@ -68,7 +68,7 @@ export const shopPackages = {
             {
                 title: 'SHORT-SLEEVE T-SHIRT',
                 desc: 'Features our small logo on the front and the large logo on the back. This item has no front pocket. Colored orange/safety-orange. Materials include cotton/polyester.',
-                price: 40,
+                price: 20,
                 disclaimer: 'Color may vary from photo. We are currently awaiting a bulk shipment, individual items may not be immediately available. Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',

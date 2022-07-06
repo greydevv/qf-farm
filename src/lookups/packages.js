@@ -28,13 +28,13 @@ export const trainingPackages = {
                 price: 100,
                 imgObj: {
                     alt: '',
-                    url: 'train/group_thumb.jpg',
+                    url: 'train/packages/evaluation.jpg',
                 },
                 to: makePackageLink('Evaluation', 'an evaluation')
             },
             {
                 title: 'PERSONALIZED',
-                desc: "Taking what we learn during your evaluation, we'll determine where you and your dog currently are. We'll combine that with your ultimate objectives to create a unique and personalized training program just for you and your dog.",
+                desc: "Taking what we learn during your evaluation, we'll determine where you and your dog currently are. We'll combine that with your ultimate objectives to create a unique and personalized training program just for you and your dog. We can cover everything from the home to the yard to the field.",
                 disclaimer: 'Pricing does not include birds.',
                 price: 85,
                 rate: 'hr',
@@ -51,8 +51,8 @@ export const trainingPackages = {
         img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/group_thumb.jpg',
         packages: [
             {
-                title: 'FOUNDATION OBEDIENCE',
-                desc: 'A four week class focusing on building the foundations of obedience.',
+                title: 'FOUNDATION OBEDIENCE - GUN DOG STYLE',
+                desc: 'In the field, your level of success will be determined by the efforts you first put into establishing a foundation of obedience. This 4-week course is uniquely designed to help you set this foundation and show you how to implement it in the world of the active gun dog. We will also cover the importance of body language, eye contact, touch, posture, and more. All of these will help you create the foundation necessary to <span>build a better gun dog.</span>',
                 price: 100,
                 imgObj: {
                     alt: '',
@@ -63,7 +63,7 @@ export const trainingPackages = {
             },
             {
                 title: 'INTERMEDIATE GUN DOG',
-                desc: 'A four week class focusing on bulding upon the foundation of obedience by taking your dog from the yard to the field.',
+                desc: 'A well-trained gun dog is worth its weight in gold, but a solid and reliable hunting companion is built, not just born, to hunt. This 4-week course is designed to take you from the yard to the field. We will begin to build upon the foundation of obedience by introducing the trained retrieve, perfecting whoa, mastering stop-to-shot and stop-to-flush, reinforcing recall, and capitalizing on cooperation. You and your dog will learn to work as a team as you continue to <span>build a better gun dog.</span>',
                 disclaimer: 'Pricing does not include birds.',
                 price: 250,
                 imgObj: {

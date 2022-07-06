@@ -42,7 +42,7 @@ export default function Train() {
         <div className='desktop:pt-10 pt-0 flex flex-col gap-10'>
             <PageHero
                 headerText='TRAIN'
-                bodyText='There is no substitute for a well-trained gun dog. At Quill Feather Farm we understand this necessity and offer a variety of unique and tailored training opportunities to help you get the most out of your pointing dog. We cater to the versatile hunting dog by offering both upland and waterfowl training in both individual and group settings.'
+                bodyText='There is no substitute for a well-trained gun dog. At Quill Feather Farm we understand this necessity and offer a variety of unique and tailored gun dog training opportunities to help you get the most out of your pointing dog. We cater to the versatile hunting dog by offering both upland and waterfowl training in both individual and group settings. At Quill Feather Farm, we are all about helping you build a better gun dog.'
                 imgObj={ {alt: 'hunters training gun dog', url: 'train/train.jpg'} }
             />
             <PackageList 

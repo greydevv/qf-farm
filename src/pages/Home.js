@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <div className='flex flex-col desktop:gap-10 gap-6'>
-            <div className='flex bg-no-repeat desktop:px-40 px-6 desktop:h-[80vh] h-40' style={splashImgStyle}>
+            <div className='flex bg-no-repeat desktop:px-40 px-6 desktop:aspect-auto desktop:h-[70vh] aspect-video w-full' style={splashImgStyle}>
                 <h1 className='text-qf-white text-left font-1 tracking-[0.2em] desktop:text-6xl text-2xl mt-auto mb-6 w-full'>QUILL FEATHER FARM</h1>
             </div>
             <div className='desktop:px-40 px-6 w-full'>
