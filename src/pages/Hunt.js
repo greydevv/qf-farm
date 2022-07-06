@@ -3,14 +3,15 @@ import { huntPhotos } from 'lookups/hunt_photos.js'
 
 function MasonryCollage({ set }) {
     // split image set in half
-    const otherSet = set.splice(0, set.length / 2)
+    const setA = set.slice(0, set.length / 2)
+    const setB = set.slice(set.length / 2, set.length)
 
     const MasonryColumn = ({ set, keyStart }) => {
         return (
             <div className='box-border grid grid-flow-row desktop:gap-6 gap-2'>
                 { set.map((imgObj, i) => {
                     return (
-                        <div key={ keyStart ? i + keyStart : i } className='desktop:gap-6 gap-2 rounded h-full w-full overflow-clip overflow-hidden'>
+                        <div key={ keyStart ? i + keyStart : i } className='rounded h-full w-full overflow-clip overflow-hidden'>
                             <img
                                 className='h-full w-full object-cover'
                                 src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url }
@@ -25,8 +26,8 @@ function MasonryCollage({ set }) {
 
     return (
         <div className='grid grid-cols-[repeat(2,_1fr)] desktop:gap-6 gap-2'>
-            <MasonryColumn set={ otherSet } />
-            <MasonryColumn set={ set } keyStart={ otherSet.length } />
+            <MasonryColumn set={ setA } />
+            <MasonryColumn set={ setB } keyStart={ setA.length } />
         </div>
     )
 }
