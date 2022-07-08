@@ -1,26 +1,26 @@
 export const navLinks = [ 
     {
-        to: '/',
+        href: '/',
         text: 'HOME',
     },
     {
-        to: '/about',
+        href: '/about',
         text: 'ABOUT',
     },
     {
-        to: '/hunt',
+        href: '/hunt',
         text: 'HUNT',
     },
     {
-        to: '/train',
+        href: '/train',
         text: 'TRAIN',
     },
     {
-        to: '/shop',
+        href: '/shop',
         text: 'SHOP',
     },
     {
-        to: '/contact',
+        href: '/contact',
         text: 'CONTACT',
     },
 ]

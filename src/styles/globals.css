@@ -32,7 +32,7 @@
      * such as 'build a better gun dog'.
      */
     .qf__body--package > span {
-        @apply text-qf-white italic;
+        @apply italic;
     }
 
     .qf__body--accolade {

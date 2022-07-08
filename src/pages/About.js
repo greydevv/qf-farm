@@ -6,7 +6,7 @@ function Profile({ name, role, bio, imgObj }) {
         <div className='flex desktop:flex-row flex-col desktop:gap-10 desktop:gap-6 desktop:px-0 px-6 max-w-main mx-auto'>
             <div className='flex flex-col gap-6 desktop:flex-1 max-w-[300px]'>
                 <div className='desktop:h-[200px] desktop:mr-0 mr-auto desktop:aspect-square aspect-[4/3] rounded overflow-clip overflow-hidden'>
-                    <img alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } className='w-full h-full object-cover' />
+                    <img alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } className='w-full h-full object-cover' />
                 </div>
                 <div className='mb-4'>
                     <h2 className='mb-1'>{ name }</h2>
@@ -28,7 +28,7 @@ function DogProfile({ name, bio, imgObj, prizes }) {
     return (
         <div className='desktop:max-w-[24rem] desktop:max-h-fit'>
             <div className='w-full overflow-clip overflow-hidden rounded aspect-[8/5] mb-2'>
-                <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } />
+                <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } />
             </div>
             <div className='flex flex-col'>
                 <div className='flex mb-2 desktop:flex-col flex-row desktop:justify-start justify-between desktop:items-start items-center'>

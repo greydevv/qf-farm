@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageHero from 'components/PageHero'
 import PackageList from 'components/PackageList'
 import ProductCard from 'components/ProductCard'
 import { trainingPackages } from 'lookups/packages.js'
 
 function TrainPackage({ pkg }) {
+    console.log(pkg.imgObj.url)
     return (
         <ProductCard
             name={ pkg.title }
@@ -17,9 +18,9 @@ function TrainPackage({ pkg }) {
         >
             <div className='flex justify-between w-full mt-8'>
                 { pkg.moreTo &&
-                    <NavLink to={ pkg.moreTo }>
-                        LEARN MORE
-                    </NavLink>
+                    <Link href={ pkg.moreTo }>
+                        <a>LEARN MORE</a>
+                    </Link>
                 }
                 <div className='flex gap-x-2 items-center'>
                     <a href={ pkg.to }>

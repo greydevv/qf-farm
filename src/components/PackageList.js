@@ -3,14 +3,14 @@ import { composeCls } from 'components/shared'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function CategoryTab({ title, count, isActive, onClick }) {
-    const cls = 'font-1 desktop:text-3xl text-2xl cursor-pointer'
+    const headerCls = 'font-1 desktop:text-3xl text-2xl cursor-pointer mb-0'
 
     return (
         <div 
             onClick={ onClick }
             className='flex desktop:gap-2 items-center'
         >
-            <h1 className={ composeCls(cls, isActive ? 'text-qf-white' : 'text-qf-light-brown') }>
+            <h1 className={ composeCls(headerCls, isActive ? 'text-qf-white' : 'text-qf-light-brown') }>
                 { title.toUpperCase() }
                 { isActive &&
                     <span className='text-qf-orange'>
@@ -39,7 +39,7 @@ export default function PackageList({ children, packages, categories, onChangeCa
     const gridCls = noEqualRow ? '' : 'desktop:auto-rows-[1fr]'
 
     return (
-        <div className='desktop:px-40 px-6 desktop:py-24 py-10 bg-qf-dark-brown flex flex-col gap-6'>
+        <div className='desktop:px-40 px-6 desktop:py-24 py-10 bg-qf-dark-brown flex flex-col gap-6 h-full'>
             <div className='flex desktop:flex-row flex-col desktop:justify-between desktop:pb-10'>
                 { Object.keys(packages).map((category, i) => {
                     return <CategoryTab 
