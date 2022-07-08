@@ -1,5 +1,6 @@
 import { contactInfo } from 'lookups/contacts.js'
 import CampaignIcon from '@mui/icons-material/Campaign'
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 
 function ContactEntry({ handle, icon, link }) {
     return (
@@ -18,11 +19,17 @@ function ContactEntry({ handle, icon, link }) {
 
 export default function Contact() {
     return (
-        <div className='desktop:pt-10 desktop:px-40 desktop:pb-10 px-6 py-12'>
+        <div className='desktop:pt-10 desktop:px-40 desktop:pb-20 px-6 py-12'>
             <div className='col-start-1 row-start-1'>
-                <h1 className='text-qf-black mb-10'>
+                <h1 className='text-qf-black mb-4'>
                     GET IN TOUCH
                 </h1>
+                <div className='desktop:max-w-[400px] w-full bg-qf-light-grey rounded mb-10 p-4'>
+                    <NotificationsActiveIcon fontSize='small' className='mb-2 rotate-[-30deg]' />
+                    <p className='text-qf-dark-brown'>
+                        Quill Feather Farm is open <span className='italic'>by appointment only</span>.
+                    </p>
+                </div>
                 <div className='flex flex-col gap-6 desktop:mx-0 mx-auto'>
                     { contactInfo.map((info, i) => {
                         return <ContactEntry {...info} key={ i } />
