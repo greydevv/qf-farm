@@ -1,5 +1,4 @@
 import { composeCls } from 'components/shared'
-import { NavLink } from 'react-router-dom'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import parse from 'html-react-parser'
 
@@ -22,7 +21,7 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
         <div className={ composeCls(gridCls, 'w-full grid desktop:grid-rows-1 grid-cols-1 grid-rows-[auto_1fr] bg-qf-brown rounded-sm overflow-clip overflow-hidden') }>
             { imgObj &&
                 <div className={ composeCls(imgCls, 'desktop:h-full h-full w-full row-start-1') }>
-                    <img alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } className='h-full w-full object-cover' />
+                    <img alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } className='h-full w-full object-cover' />
                 </div>
             }
             <div className={ composeCls(infoCls, 'flex flex-col justify-between desktop:px-6 px-2 desktop:pt-6 py-2 desktop:row-start-1 desktop:col-start-2 row-start-2') }>
@@ -46,7 +45,7 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
                     </p>
                     { disclaimer && <DisclaimerAlert text={ disclaimer } /> }
                 </div>
-                { parse }
+                { children }
             </div>
         </div>
     )

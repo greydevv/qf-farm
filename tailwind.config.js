@@ -1,6 +1,7 @@
 module.exports = {
     content: [
-        "./src/**/*.js"
+        "./src/pages/**/*.{js,ts,jsx,tsx}",
+        "./src/components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         colors: {
@@ -33,6 +34,7 @@ module.exports = {
                 '25': '1600px',
                 'main': '1200px',
                 'body': '800px',
+                'screen': '100vw',
             },
         }
     }

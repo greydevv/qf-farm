@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
-import { ReactComponent as QfLogo } from 'assets/images/qf/logo.svg'
+import Link from 'next/link'
+import Image from 'next/image'
+import Logo from 'components/Logo'
+import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import { navLinks } from 'Const'
 // import { useAuth0 } from '@auth0/auth0-react'
-import 'components/Navbar.css'
+import navStyles from 'components/Navbar.module.css'
 
-function NavItem({ text, ...rest }) {
-    
-    const makeClsName = (isActive) => {
+function NavItem({ href, text, isActive }) {
+
+    const makeClsName = () => {
         const baseClasses = 'qf__body my-auto text-sm font-medium tracking-wider';
         if (isActive) {
             return `${baseClasses} text-qf-orange`
@@ -18,9 +20,11 @@ function NavItem({ text, ...rest }) {
     }
 
     return (
-        <NavLink { ...rest } className={({ isActive }) => makeClsName(isActive)}>
-            { text.toUpperCase() }
-        </NavLink>
+        <Link href={ href } >
+            <a className={ makeClsName() }>
+                { text.toUpperCase() }
+            </a>
+        </Link>
     )
 }
 
@@ -35,7 +39,7 @@ function NavButton({ children, ...rest }) {
 export function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
     // const { loginWithRedirect, logout, isAuthenticated, isLoading:isAuth0Loading } = useAuth0()
-    const { pathname } = useLocation()
+    const { pathname } = useRouter()
 
     useEffect(() => {
         setMenuOpen(false);
@@ -49,10 +53,8 @@ export function Navbar() {
 
         // const authButtonClicked = () => {
         //     if (isAuthenticated) {
-        //         console.log('logging out')
         //         logout({ returnTo: window.location.origin })
         //     } else {
-        //         console.log('logging in')
         //         loginWithRedirect()
         //     }
         // }
@@ -63,7 +65,12 @@ export function Navbar() {
             <div className='flex desktop:flex-row flex-col justify-between h-full w-full'>
                 <div className={ navCls }>
                     { navLinks.map((e, i) => {
-                        return <NavItem key={ i } { ...e } />
+                        return <NavItem 
+                            key={ i }
+                            href={ e.href }
+                            text={ e.text }
+                            isActive={ pathname === e.href }
+                        />
                     })}
                 </div>
                 {/* !isAuth0Loading &&
@@ -90,12 +97,18 @@ export function Navbar() {
         return cls
     }
 
+    const menuCls = () => {
+        return menuOpen ? navStyles['nav-open'] : navStyles['nav-closed']
+    }
+    
     return (
         <div className='sticky top-0 z-[9999] w-full h-20'>
             <div className={ navBarCls() }>
-                <NavLink to='/' className='w-[60px] h-[60px] text-qf-light-brown'>
-                    <QfLogo />
-                </NavLink>
+                <Link href='/'>
+                    <a className='w-[60px] h-[60px] text-qf-light-brown'>
+                        <Logo />
+                    </a>
+                </Link>
                 <button className='desktop:hidden fill-qf-light-brown text-left font-bold text-lg' onClick={ toggleMenu }>
                     { menuOpen 
                         ? <CloseIcon fontSize='medium' className='text-qf-light-brown' /> 
@@ -106,7 +119,7 @@ export function Navbar() {
                     <NavItems />
                 </div>
             </div>
-            <div className={ (menuOpen ? 'nav-open' : 'nav-closed') + ' z-[9999] desktop:hidden transition-transform ease-out fixed top-20 right-0 bottom-0 w-[50vw] bg-qf-white desktop:text-left text-right' }>
+            <div className={ menuCls() + ' z-[9999] desktop:hidden transition-transform ease-out fixed top-20 right-0 bottom-0 w-[50vw] bg-qf-white desktop:text-left text-right' }>
                 <div className='flex flex-col bg-qf-dark-brown h-full gap-12 pb-12'>
                     <div className='h-full px-6'>
                         <NavItems />

@@ -1,5 +1,3 @@
-import { NavLink } from 'react-router-dom'
-
 export default function PageHero({ headerText, bodyText, imgObj, comingSoonText, children }) {
     return (
         <div className='desktop:px-40 box-border'>
@@ -24,7 +22,7 @@ export default function PageHero({ headerText, bodyText, imgObj, comingSoonText,
                 </div>
                 { imgObj &&
                     <div className='ml-auto desktop:w-auto w-full desktop:h-full h-auto aspect-video desktop:max-w-[500px] overflow-clip overflow-hidden desktop:rounded desktop:order-last order-first'>
-                        <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url } />
+                        <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } />
                     </div>
                 }
             </div>

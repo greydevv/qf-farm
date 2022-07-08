@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import { navLinks } from 'Const'
 
 export default function Footer() {
@@ -8,11 +8,11 @@ export default function Footer() {
                 QUILL FEATHER FARM
             </h2>
             <div className='flex desktop:flex-row flex-col desktop:gap-6 gap-1'>
-                { navLinks.map(({to, text}, i) => {
+                { navLinks.map(({href, text}, i) => {
                     return (
-                        <NavLink key={ i } to={ to } className='qf__body text-qf-light-brown font-xs font-medium'>
-                            { text }
-                        </NavLink>
+                        <Link key={ i } href={ href }>
+                            <a className='qf__body text-qf-light-brown font-xs font-medium'>{ text }</a>
+                        </Link>
                     )
                 })}
             </div>

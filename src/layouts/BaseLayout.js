@@ -1,14 +1,14 @@
 import { Navbar } from 'components/Navbar';
 import Footer from 'components/Footer'
-import { Outlet } from 'react-router-dom';
 
-export default function BaseLayout() {
-        {/* <div className='min-h-screen relative'> */}
+export default function BaseLayout({ children }) {
     return (
-        <div className='min-h-screen max-w-screen w-full bg-qf-white grid grid-rows-[auto_minmax(0,_1fr)]'>
-            <Navbar />
-            <Outlet />
-            <Footer />
+        <div style={ {minHeight: '100vh', maxWidth: '100vw' } } className='w-full bg-qf-white grid grid-rows-[auto_minmax(0,_1fr)_auto]'>
+            <Navbar/>
+            <div className='row-start-2'>
+                { children }
+            </div>
+            <Footer/>
         </div>
     );
 }

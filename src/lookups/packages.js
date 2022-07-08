@@ -20,7 +20,7 @@ const weekendWarriorPackage = {
 
 export const trainingPackages = {
     individual: {
-        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/individual_thumb.jpg',
+        img: process.env.NEXT_PUBLIC_S3_BUCKET_NAME + 'train/individual_thumb.jpg',
         packages: [
             {
                 title: 'EVALUATION',
@@ -48,7 +48,7 @@ export const trainingPackages = {
         ]
     },
     group: {
-        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/group_thumb.jpg',
+        img: process.env.NEXT_PUBLIC_S3_BUCKET_NAME + 'train/group_thumb.jpg',
         packages: [
             {
                 title: 'FOUNDATION OBEDIENCE - GUN DOG STYLE',
@@ -58,7 +58,7 @@ export const trainingPackages = {
                     alt: '',
                     url: 'train/packages/foundation_obedience.jpg',
                 },
-                moreTo: 'foundation-obedience',
+                moreTo: 'train/foundation-obedience',
                 to: makePackageLink('Foundation Obedience', 'the foundation obedience class')
             },
             {
@@ -70,13 +70,13 @@ export const trainingPackages = {
                     alt: '',
                     url: 'train/packages/intermediate_gun_dog.jpg',
                 },
-                moreTo: 'intermediate-gun-dog',
+                moreTo: 'train/intermediate-gun-dog',
                 to: makePackageLink('Intermediate Gun Dog', 'the intermediate gun dog class')
             },
         ]
     },
     overnight: {
-        img: process.env.REACT_APP_S3_BUCKET_NAME + 'train/bootcamp_thumb.jpg',
+        img: process.env.NEXT_PUBLIC_S3_BUCKET_NAME + 'train/bootcamp_thumb.jpg',
         packages: [
             {
                 title: 'COME, SIT, STAY... WITH US',

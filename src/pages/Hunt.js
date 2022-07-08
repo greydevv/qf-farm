@@ -14,7 +14,7 @@ function MasonryCollage({ set }) {
                         <div key={ keyStart ? i + keyStart : i } className='rounded h-full w-full overflow-clip overflow-hidden'>
                             <img
                                 className='h-full w-full object-cover'
-                                src={ process.env.REACT_APP_S3_BUCKET_NAME + imgObj.url }
+                                src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url }
                                 alt={ imgObj.alt }
                             />
                         </div>

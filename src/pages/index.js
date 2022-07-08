@@ -1,13 +1,10 @@
 import FeatureCardList from 'components/FeatureCardList';
 import { mainFeatures } from 'Const';
-import { NavLink } from 'react-router-dom';
-
-import 'pages/Home.css';
 
 export default function Home() {
 
     const splashImgStyle = {
-        backgroundImage: `url(${process.env.REACT_APP_S3_BUCKET_NAME + 'home/field.jpg'})`,
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_S3_BUCKET_NAME + 'home/field.jpg'})`,
         backgroundSize: 'cover',
         backgroundPosition: 'bottom',
     }
