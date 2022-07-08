@@ -1,5 +1,6 @@
 import { composeCls } from 'components/shared'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import Image from 'next/image'
 import parse from 'html-react-parser'
 
 function DisclaimerAlert({ text }) {
@@ -20,8 +21,8 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
     return (
         <div className={ composeCls(gridCls, 'w-full grid desktop:grid-rows-1 grid-cols-1 grid-rows-[auto_1fr] bg-qf-brown rounded-sm overflow-clip overflow-hidden') }>
             { imgObj &&
-                <div className={ composeCls(imgCls, 'desktop:h-full h-full w-full row-start-1') }>
-                    <img alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } className='h-full w-full object-cover' />
+                <div className={ composeCls(imgCls, 'relative desktop:h-full h-full w-full row-start-1') }>
+                    <Image alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } width='100%' height='100%' layout='fill' priority className='h-full w-full object-cover' />
                 </div>
             }
             <div className={ composeCls(infoCls, 'flex flex-col justify-between desktop:px-6 px-2 desktop:pt-6 py-2 desktop:row-start-1 desktop:col-start-2 row-start-2') }>

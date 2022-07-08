@@ -24,7 +24,7 @@ export const shopPackages = {
                 disclaimer: 'Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
-                    url: 'shop/preening_mallard.jpg',
+                    url: 'shop/artwork/preening_mallard.jpg',
                 },
                 to: makeShopLink('Preening Mallard', 6),
             },
@@ -35,7 +35,7 @@ export const shopPackages = {
                 disclaimer: 'Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
-                    url: 'shop/preening_wood_duck.jpg',
+                    url: 'shop/artwork/preening_wood_duck.jpg',
                 },
                 to: makeShopLink('Preening Wood-Duck', 2),
             },
@@ -46,7 +46,7 @@ export const shopPackages = {
                 disclaimer: 'Pricing does not include shipping • US shipping only.',
                 imgObj: {
                     alt: '',
-                    url: 'shop/chukar.jpg',
+                    url: 'shop/artwork/chukar.jpg',
                 },
                 to: makeShopLink('Chukar', 3),
             },
