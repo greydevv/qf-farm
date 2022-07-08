@@ -17,7 +17,7 @@ export default function Home() {
             <div className='desktop:px-40 px-6 w-full'>
                 <div className='w-full box-border'>
                   <div className='mx-auto w-full desktop:pb-8 pb-4'>
-                    <p className='max-w-none'>
+                    <p className='max-w-none text-lg text-qf-dark-brown'>
                         Quill Feather Farm is a place for all things upland.
                         Located in a quiet nook in rural York Springs, PA,
                         Quill Feather Farm sits on 100 acres of woods, fields,
