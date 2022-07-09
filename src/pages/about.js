@@ -17,7 +17,7 @@ function Profile({ name, role, bio, imgObj }) {
                 </div>
             </div>
             <div className='desktop:flex-[2] desktop:w-4/5'>
-                <div className='desktop:px-6 px-2 border-l border-qf-light-brown desktop:pb-8 pb-4'>
+                <div className='desktop:px-6 desktop:border-l border-qf-light-brown desktop:pb-8 pb-4'>
                     <p className='text-qf-light-brown'>{ bio }</p>
                 </div>
             </div>
