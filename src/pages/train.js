@@ -6,7 +6,6 @@ import ProductCard from 'components/ProductCard'
 import { trainingPackages } from 'lookups/packages.js'
 
 function TrainPackage({ pkg }) {
-    console.log(pkg.imgObj.url)
     return (
         <ProductCard
             name={ pkg.title }
@@ -44,7 +43,7 @@ export default function Train() {
             <PageHero
                 headerText='TRAIN'
                 bodyText='There is no substitute for a well-trained gun dog. At Quill Feather Farm we understand this necessity and offer a variety of unique and tailored gun dog training opportunities to help you get the most out of your pointing dog. We cater to the versatile hunting dog by offering both upland and waterfowl training in both individual and group settings. At Quill Feather Farm, we are all about helping you build a better gun dog.'
-                imgObj={ {alt: 'hunters training gun dog', url: 'train/train.jpg'} }
+                imgObj={ {alt: 'hunters training gun dog', url: 'train/train_hero.jpg'} }
             />
             <PackageList 
                 categories={ Object.keys(trainingPackages) }

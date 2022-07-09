@@ -82,7 +82,7 @@ export const shopPackages = {
         packages: [
             {
                 title: 'DOG PORTRAITS',
-                desc: 'Commissioned portraits created by Cristin. Colored pencil, pen and ink, and acrylic on canvas. Please see examples below of previously commissioned portraits!',
+                desc: 'We’ve all had that special dog. Maybe it was your first dog, or best bud from childhood, or maybe it’s the one currently sitting by your side. Why not immortalize and honor them with a custom portrait? Cristin works in a variety of mediums such as acrylic paint, colored pencils, and her personal favorite, pen-and-ink. Contact us to find out more about getting an original portrait done.',
                 disclaimer: 'Pricing varies, starting at $200',
                 price: 200,
                 buyText: 'CONTACT',
@@ -94,84 +94,84 @@ export const shopPackages = {
                 desc: '"Knox" | Prismacolor pencils on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/knox.jpg',
+                    url: 'shop/portraits/examples/knox.jpg',
                 }
             },
             {
                 desc: '"Kimber" | Prismacolor pencils on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/kimber.jpg',
+                    url: 'shop/portraits/examples/kimber.jpg',
                 }
             },
             {
                 desc: '"Libby" | acrylic on canvas | 16" x 20"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/libby.jpg',
+                    url: 'shop/portraits/examples/libby.jpg',
                 }
             },
             {
                 desc: '"Sonny" | acrylic on canvas | 10" x 10"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/sonny.jpg',
+                    url: 'shop/portraits/examples/sonny.jpg',
                 }
             },
             {
                 desc: '"Ace in a T-shirt" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/ace_in_t_shirt.jpg',
+                    url: 'shop/portraits/examples/ace_in_t_shirt.jpg',
                 }
             },
             {
                 desc: '"Patches" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/patches.jpg',
+                    url: 'shop/portraits/examples/patches.jpg',
                 }
             },
             {
                 desc: '"Bear" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/bear.jpg',
+                    url: 'shop/portraits/examples/bear.jpg',
                 }
             },
             {
                 desc: '"Goose" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/goose.jpg',
+                    url: 'shop/portraits/examples/goose.jpg',
                 }
             },
             {
                 desc: '"Rosie" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/rosie.jpg',
+                    url: 'shop/portraits/examples/rosie.jpg',
                 }
             },
             {
                 desc: '"Shadow" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/shadow.jpg',
+                    url: 'shop/portraits/examples/shadow.jpg',
                 }
             },
             {
                 desc: '"Maggie" | acrylic on canvas | 16" x 20"',
                 imgObj: {
                     alt: '',
-                    url: 'shop/examples/maggie.jpg',
+                    url: 'shop/portraits/examples/maggie.jpg',
                 }
             },
             {
                 desc: '"Jess" | Black Liquitex ink on 98# paper | 14" x 17"',
                 imgObj: {
                     alt: 'dog portrait pen and ink',
-                    url: 'shop/examples/jess.jpg',
+                    url: 'shop/portraits/examples/jess.jpg',
                 }
             },
         ],

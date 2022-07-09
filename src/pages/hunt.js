@@ -1,5 +1,7 @@
+import LinkButton from 'components/LinkButton'
 import PageHero from 'components/PageHero'
 import { huntPhotos } from 'lookups/hunt_photos.js'
+import PageBlock from 'components/PageBlock'
 
 function MasonryCollage({ set }) {
     // split image set in half
@@ -45,18 +47,20 @@ export default function Hunts() {
             <PageHero
                 headerText='HUNT'
                 bodyText='We are working diligently to create a unique upland experience for individuals, groups, and small corporate outings. Please check back regularly…or click the link below to join our waiting list and be the first to get notified when booking hunts is available!'
-                imgObj={ {alt: 'pheasants after upland hunt', url: 'hunt/hunt.jpg'} }
+                imgObj={ {alt: 'pheasants after upland hunt', url: 'hunt/hunt_hero.jpg'} }
                 comingSoonText='COMING FALL 2022'
             >
-                <div className='mr-auto'>
-                    <a className='text-qf-white block font-medium tracking-wider text-center rounded py-3 px-4 bg-qf-orange' href={ mailTo }>
-                        JOIN WAITING LIST
-                    </a>
-                </div>
+                <LinkButton
+                    href={ mailTo }
+                    text='JOIN WAITING LIST'
+                    className='bg-qf-orange'
+                />
             </PageHero>
-            <div className='box-border desktop:px-40 px-6 desktop:py-24 py-16 bg-qf-dark-brown'>
+            <PageBlock
+                outerCls='desktop:py-24 py-16 bg-qf-dark-brown'
+            >
                 <MasonryCollage set={ huntPhotos }  />
-            </div>
+            </PageBlock>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import { navLinks } from 'Const'
 // import { useAuth0 } from '@auth0/auth0-react'
 import navStyles from 'components/Navbar.module.css'
+import PageBlock from 'components/PageBlock'
 
 function NavItem({ href, text, isActive }) {
 
@@ -102,8 +103,11 @@ export function Navbar() {
     }
     
     return (
-        <div className='sticky top-0 z-[9999] w-full h-20'>
-            <div className={ navBarCls() }>
+        <div className='sticky top-0 z-[9999] w-full h-20 bg-qf-dark-brown'>
+            <PageBlock
+                outerCls='h-full'
+                innerCls='h-full flex items-center justify-between'
+            >
                 <Link href='/'>
                     <a className='w-[60px] h-[60px] text-qf-light-brown'>
                         <Logo />
@@ -118,7 +122,7 @@ export function Navbar() {
                 <div className='desktop:flex hidden'>
                     <NavItems />
                 </div>
-            </div>
+            </PageBlock>
             <div className={ menuCls() + ' z-[9999] desktop:hidden transition-transform ease-out fixed top-20 right-0 bottom-0 w-[50vw] bg-qf-white desktop:text-left text-right' }>
                 <div className='flex flex-col bg-qf-dark-brown h-full gap-12 pb-12'>
                     <div className='h-full px-6'>

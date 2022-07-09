@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { composeCls } from 'components/shared'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import PageBlock from 'components/PageBlock'
 
 function CategoryTab({ title, count, isActive, onClick }) {
     const headerCls = 'font-1 desktop:text-3xl text-2xl cursor-pointer mb-0'
@@ -39,7 +40,10 @@ export default function PackageList({ children, packages, categories, onChangeCa
     const gridCls = noEqualRow ? '' : 'desktop:auto-rows-[1fr]'
 
     return (
-        <div className='desktop:px-40 px-6 desktop:py-24 py-10 bg-qf-dark-brown flex flex-col gap-6 h-full'>
+        <PageBlock
+            outerCls='desktop:py-24 py-10 bg-qf-dark-brown'
+            innerCls='flex flex-col gap-6'
+        >
             <div className='flex desktop:flex-row flex-col desktop:justify-between desktop:pb-10'>
                 { Object.keys(packages).map((category, i) => {
                     return <CategoryTab 
@@ -54,6 +58,6 @@ export default function PackageList({ children, packages, categories, onChangeCa
             <div className={ composeCls(gridCls, 'grid grid-cols-1 gap-y-6') }>
                 { children }
             </div>
-        </div>
+        </PageBlock>
     )
 }

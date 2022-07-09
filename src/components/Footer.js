@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import { navLinks } from 'Const'
+import PageBlock from 'components/PageBlock'
 
 export default function Footer() {
     return (
-        <div className='border-t-2 border-qf-light-brown flex-1 h-full bg-qf-dark-brown desktop:px-40 px-6 desktop:py-10 py-6'>
+        <PageBlock
+            outerCls='border-t-2 border-qf-light-brown h-full bg-qf-dark-brown desktop:pt-10 pt-6 desktop:pb-20 pb-12'
+        >
             <h2 className='mb-6'>
                 QUILL FEATHER FARM
             </h2>
@@ -16,6 +19,6 @@ export default function Footer() {
                     )
                 })}
             </div>
-        </div>
+        </PageBlock>
     )
 }

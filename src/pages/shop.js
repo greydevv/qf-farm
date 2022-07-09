@@ -57,7 +57,7 @@ export default function Shop() {
             <PageHero
                 headerText='SHOP'
                 bodyText="Welcome to our bare bones shop! Here, you'll currently find some original artwork and Quill Feather-branded apparel. Please check back soon as we are preparing to launch our official shop which will include more artwork, merchandise, and upland and dog-related gifts with a safe and easy checkout!"
-                imgObj={ {alt: '', url: 'shop/shop_thumb.jpg'} }
+                imgObj={ {alt: '', url: 'shop/shop_hero.jpg'} }
             />
             <PackageList
                 categories={ Object.keys(shopPackages) }

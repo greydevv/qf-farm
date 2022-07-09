@@ -1,4 +1,4 @@
-export const composeCls = (base, extra) => {
+export const composeCls = (extra, base) => {
     if (extra) {
         base = `${base} ${extra}`
     }
