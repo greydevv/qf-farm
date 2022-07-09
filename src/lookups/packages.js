@@ -63,7 +63,7 @@ export const trainingPackages = {
             },
             {
                 title: 'INTERMEDIATE GUN DOG',
-                desc: 'A well-trained gun dog is worth its weight in gold, but a solid and reliable hunting companion is built, not just born, to hunt. This 4-week course is designed to take you from the yard to the field. We will begin to build upon the foundation of obedience by introducing the trained retrieve, perfecting whoa, mastering stop-to-shot and stop-to-flush, reinforcing recall, and capitalizing on cooperation. You and your dog will learn to work as a team as you continue to <span>build a better gun dog.</span>',
+                desc: 'A hunting companion is worth its weight in gold, but a solid and reliable one is forged through effective training. This 4-week course is designed to take you from the yard to the field. We will begin to build upon the foundation of obedience by introducing the trained retrieve, perfecting whoa, mastering stop-to-shot and stop-to-flush, reinforcing recall, and capitalizing on cooperation. You and your dog will learn to work as a team as you continue to <span>build a better gun dog.</span>',
                 disclaimer: 'Pricing does not include birds.',
                 price: 250,
                 imgObj: {

@@ -49,7 +49,7 @@ export default function About() {
         <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-5 flex flex-col desktop:gap-20 gap-6'>
             <PageHero
                 headerText='ABOUT'
-                bodyText='Quill Feather Farm was established in 2021 by Cristin Q Murray and Brandt Fink Jr. as a place to share their passion for the sport of upland hunting, raising and training versatile hunting dogs, and providing unique training opprtunities to help others do the same.'
+                bodyText='Quill Feather Farm was established in 2021 by Cristin Q. Murray and Brandt Fink Jr. as a place to share their passion for the sport of upland hunting, raising and training versatile hunting dogs, and providing unique and tailored training opprtunities to help others do the same. We focus primarily on pointing breeds and provide training both on land and in water. We firmly believe that solid hunting partners are not just born but also built to hunt. This requires a solid foundation that starts in the home, moves to the yard, and extends into the field and beyond.'
                 imgObj={ {alt: 'cristin and brandt with gun dogs', url: 'about/about_hero.jpg'} }
             />
             <PageBlock
