@@ -18,9 +18,11 @@ export default function PageHero({ headerText, bodyText, imgObj, comingSoonText,
                             </div>
                         }
                     </div>
-                    <p className='max-w-body'>
-                        { bodyText }
-                    </p>
+                    { bodyText && 
+                        <p className='max-w-body'>
+                            { bodyText }
+                        </p>
+                    }
                 </div>
                 <div>
                     { children }
