@@ -24,7 +24,7 @@
     }
 
     p {
-        @apply text-qf-grey font-light text-sm desktop:leading-6 desktop:text-base max-w-body;
+        @apply text-qf-dark-brown font-light text-sm desktop:leading-6 desktop:text-base max-w-body;
     }
 
     /**

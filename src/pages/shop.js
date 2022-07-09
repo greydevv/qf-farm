@@ -56,7 +56,7 @@ export default function Shop() {
         <div className='desktop:pt-10 w-full pt-0 flex flex-col gap-20'>
             <PageHero
                 headerText='SHOP'
-                bodyText="Welcome to our bare bones shop! Here, you'll currently find some original artwork and Quill Feather-branded apparel. Please check back soon as we are preparing to launch our official shop which will include more artwork, merchandise, and upland and dog-related gifts with a safe and easy checkout!"
+                bodyText="Welcome to our bare bones shop! Here, you'll currently find some original artwork and Quill Feather Farm-branded apparel. Please check back soon as we are preparing to launch our official shop which will include more artwork, merchandise selections, and upland and dog-related gift items with a smooth, safe, and easy checkout!"
                 imgObj={ {alt: '', url: 'shop/shop_hero.jpg'} }
             />
             <PackageList

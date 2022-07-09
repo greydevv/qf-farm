@@ -4,24 +4,22 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PageBlock from 'components/PageBlock'
 
 function CategoryTab({ title, count, isActive, onClick }) {
-    const headerCls = 'font-1 desktop:text-3xl text-2xl cursor-pointer mb-0'
+    const headerCls = isActive ? 'text-qf-white' : 'text-qf-light-brown'
+    const expandIconCls = isActive ? 'text-qf-white' : 'text-qf-light-brown'
+    const countCls = isActive ? 'text-qf-orange' : 'text-qf-light-brown'
 
     return (
         <div 
             onClick={ onClick }
             className='flex desktop:gap-2 items-center'
         >
-            <h1 className={ composeCls(headerCls, isActive ? 'text-qf-white' : 'text-qf-light-brown') }>
+            <h1 className={ composeCls(headerCls, 'font-1 desktop:text-3xl text-2xl cursor-pointer mb-0') }>
                 { title.toUpperCase() }
-                { isActive &&
-                    <span className='text-qf-orange'>
-                        { ' ' + count }
-                    </span>
-                }
+                <span className={ countCls }>
+                    { ' ' + count }
+                </span>
             </h1>
-            { isActive && count > 0 &&
-                <ExpandMoreIcon className='text-qf-white h-8 w-8' />
-            }
+            <ExpandMoreIcon className={ composeCls(expandIconCls, 'text-qf-white h-8 w-8') } />
         </div>
     )
 }

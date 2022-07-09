@@ -53,7 +53,7 @@ export default function Hunts() {
                 <LinkButton
                     href={ mailTo }
                     text='JOIN WAITING LIST'
-                    className='bg-qf-orange'
+                    className='bg-qf-dark-brown'
                 />
             </PageHero>
             <PageBlock

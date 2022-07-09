@@ -1,18 +1,22 @@
 import { composeCls } from 'components/shared'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import Image from 'next/image'
 import parse from 'html-react-parser'
 
-function DisclaimerAlert({ text }) {
+function AlertText({ text, benefit }) {
     return (
         <div className='flex flex-row gap-x-2 items-center'>
-            <ErrorOutlineIcon fontSize='small' className='text-qf-orange mb-auto' />
-            <p className='text-xs tracking-wider'>{ text }</p>
+            { benefit
+                ? <CheckCircleOutlineIcon fontSize='small' className='text-qf-orange mb-auto' />
+                : <ErrorOutlineIcon fontSize='small' className='text-qf-orange mb-auto' />
+            }
+            <p className='text-xs text-qf-grey tracking-wider'>{ text }</p>
         </div>
     )
 }
 
-export default function ProductCard({ children, name, desc, price, priceRate, disclaimer, attrList, imgObj, tall }) {
+export default function ProductCard({ children, name, desc, price, priceRate, disclaimer, benefit, attrList, imgObj, tall }) {
 
     const gridCls = imgObj ? 'desktop:grid-cols-[1fr_3fr]' : 'desktop:grid-cols-1'
     const imgCls = tall ? 'aspect-square' : 'desktop:aspect-auto aspect-[7/2]'
@@ -41,10 +45,11 @@ export default function ProductCard({ children, name, desc, price, priceRate, di
                             }
                         </h2>
                     </div>
-                    <p className='w-full qf__body--package'>
+                    <p className='w-full text-qf-grey qf__body--package'>
                         { parse(desc) }
                     </p>
-                    { disclaimer && <DisclaimerAlert text={ disclaimer } /> }
+                    { disclaimer && <AlertText text={ disclaimer } /> }
+                    { benefit && <AlertText benefit text={ benefit } /> }
                 </div>
                 { children }
             </div>

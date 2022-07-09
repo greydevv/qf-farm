@@ -1,6 +1,7 @@
 import PageBlock from 'components/PageBlock'
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 
-export default function PageHero({ headerText, bodyText, imgObj, comingSoonText, children }) {
+export default function PageHero({ headerText, bodyText, reminderText, imgObj, comingSoonText, children }) {
     return (
         <PageBlock
             outerCls='px-0'
@@ -13,8 +14,10 @@ export default function PageHero({ headerText, bodyText, imgObj, comingSoonText,
                             { headerText }
                         </h1>
                         { comingSoonText &&
-                            <div className='rounded my-auto bg-qf-orange/30 px-2 py-0.5 text-qf-orange text-sm'>
-                                { comingSoonText }
+                            <div className='rounded my-auto bg-qf-orange px-2 py-0.5'>
+                                <p className='text-qf-white text-sm'>
+                                    { comingSoonText }
+                                </p>
                             </div>
                         }
                     </div>
@@ -29,8 +32,20 @@ export default function PageHero({ headerText, bodyText, imgObj, comingSoonText,
                 </div>
             </div>
             { imgObj &&
-                <div className='desktop:col-start-2 ml-auto w-full h-auto aspect-video desktop:max-w-[500px] overflow-clip overflow-hidden desktop:rounded desktop:order-last order-first'>
-                    <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } />
+                <div className='desktop:col-start-2 row-start-1 grid grid-rows-[1fr_repeat(2,_auto)] grid-cols-1 mb-auto'>
+                    <div className='col-start-1 col-end-2 row-start-1 row-end-3 ml-auto w-full h-auto aspect-video desktop:max-w-[500px] overflow-clip overflow-hidden desktop:rounded desktop:order-last order-first'>
+                        <img className='w-full h-full object-cover' alt={ imgObj.alt } src={ process.env.NEXT_PUBLIC_S3_BUCKET_NAME + imgObj.url } />
+                    </div>
+                    { reminderText &&
+                        <div className='z-10 col-start-1 mt-10 desktop:px-10 px-6 col-end-2 row-start-2 row-end-4'>
+                            <div className='w-full bg-qf-light-grey rounded p-4'>
+                                <NotificationsActiveIcon fontSize='small' className='mb-2 rotate-[-30deg]' />
+                                <p className='text-qf-dark-brown'>
+                                    { reminderText }
+                                </p>
+                            </div>
+                        </div>
+                    }
                 </div>
             }
         </PageBlock>

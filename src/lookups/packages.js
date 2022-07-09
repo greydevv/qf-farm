@@ -24,7 +24,8 @@ export const trainingPackages = {
         packages: [
             {
                 title: 'EVALUATION',
-                desc: 'This is a mandatory precursor to any individual program. Having an understanding of where you and your dog currently are is an imperative step to building a personalized and successful training program.',
+                desc: 'Having an understanding of where you and your dog currently are is an imperative step to building a successful training program. During this 1 to 2 hour session, we will evaluate you and your dog through a variety of situations in the yard, the field, and at the water. Taking what we learn, we will create a personalized training program just for you and your dog. This is a mandatory precursor to any individual program.',
+                benefit: 'Pricing includes birds.',
                 price: 100,
                 imgObj: {
                     alt: '',

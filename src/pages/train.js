@@ -13,6 +13,7 @@ function TrainPackage({ pkg }) {
             price={ pkg.price }
             priceRate={ pkg.rate }
             disclaimer={ pkg.disclaimer }
+            benefit={ pkg.benefit }
             imgObj={ pkg.imgObj }
         >
             <div className='flex justify-between w-full mt-8'>
