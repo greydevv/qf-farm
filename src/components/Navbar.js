@@ -5,10 +5,10 @@ import Logo from 'components/Logo'
 import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import { navLinks } from 'Const'
 // import { useAuth0 } from '@auth0/auth0-react'
 import navStyles from 'components/Navbar.module.css'
 import PageBlock from 'components/PageBlock'
+import { navLinks } from 'lookups/navigation.js'
 
 function NavItem({ href, text, isActive }) {
 

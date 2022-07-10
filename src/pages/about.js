@@ -1,6 +1,6 @@
 import PageHero from 'components/PageHero'
-import { cristinBio, brandtBio } from 'Const'
 import PageBlock from 'components/PageBlock'
+import { cristinBio, brandtBio, dogBios } from 'lookups/profiles.js'
 
 function Profile({ name, role, bio, imgObj }) {
     return (
@@ -46,7 +46,7 @@ function DogProfile({ name, bio, imgObj, prizes }) {
 
 export default function About() {
     return (
-        <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-5 flex flex-col desktop:gap-20 gap-6'>
+        <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-5 flex flex-col desktop:gap-20 gap-10'>
             <PageHero
                 headerText='ABOUT'
                 bodyText='Quill Feather Farm was established in 2021 by Cristin Q. Murray and Brandt Fink Jr. as a place to share their passion for the sport of upland hunting, raising and training versatile hunting dogs, and providing unique and tailored training opprtunities to help others do the same. We focus primarily on pointing breeds and provide training both on land and in water. We firmly believe that solid hunting partners are not just born but also built to hunt. This requires a solid foundation that starts in the home, moves to the yard, and extends into the field and beyond.'
@@ -74,25 +74,25 @@ export default function About() {
             >
                 <DogProfile 
                     name='MOLSON' 
-                    bio='Our “long-tailed shorthair” is a true gentleman in the house, but a phenom in the field. He has a nose like no other dog and hops effortlessly through the field like a gazelle.' 
+                    bio={ dogBios.molson }
                     imgObj={ {alt: '', url: 'about/dogs/molson.jpg'} }
                     prizes={ ['UT I'] }
                 />
                 <DogProfile 
                     name='REMMEL' 
-                    bio='Our solid-liver “brown dog,” is big and powerful and highly successful in the field. He’s a self-taught therapy dog for Cristin. He nearly died from a splenic torsion, but is back better than ever.' 
+                    bio={ dogBios.remmel }
                     imgObj={ {alt: '', url: 'about/dogs/remmel.jpg'} }
                     prizes={ ['NA II', 'UT I'] }
                 />
                 <DogProfile 
                     name='CAMO' 
-                    bio='Our “block head,” is a powerhouse in a compact body. Prefering work over affection, this dog always gets it done in the field. He has thick coat and loves the cold…and he has an intense point.' 
+                    bio={ dogBios.camo }
                     imgObj={ {alt: '', url: 'about/dogs/camo.jpg'} }
                     prizes={ ['NA I', 'UT I'] }
                 />
                 <DogProfile 
                     name='MODELO' 
-                    bio='Our “little stinker,” who not only causes a lot of shenanigans but also has the most adorable skunk stripe on the underside of her tail. She’s an up-and-comer and already showing tremendous potential.' 
+                    bio={ dogBios.modelo }
                     imgObj={ {alt: '', url: 'about/dogs/modelo.jpg'} }
                     prizes={ ['NA I'] }
                 />

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { navLinks } from 'Const'
 import PageBlock from 'components/PageBlock'
+import { navLinks } from 'lookups/navigation.js'
 
 export default function Footer() {
     return (
