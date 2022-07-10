@@ -43,7 +43,7 @@ export default function Hunts() {
     const mailTo = `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 
     return (
-        <div className='desktop:pt-10 pt-0 flex flex-col desktop:gap-20 gap-6'>
+        <div className='desktop:pt-10 pt-0 flex flex-col desktop:gap-20 gap-10'>
             <PageHero
                 headerText='HUNT'
                 bodyText='We are working diligently to create a unique upland experience for individuals, groups, and small corporate outings. Please check back regularly…or click the link below to join our waiting list and be the first to get notified when booking hunts is available!'

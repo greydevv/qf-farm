@@ -20,7 +20,7 @@ function ContactEntry({ handle, icon, link }) {
 
 export default function Contact() {
     return (
-        <div className='desktop:pt-10 pt-0 flex flex-col gap-6 desktop:pb-20 pb-5'>
+        <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-10'>
             <PageHero
                 headerText='GET IN TOUCH'
                 reminderText='Quill Feather Farm is open by appointment only.'

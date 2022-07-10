@@ -23,7 +23,7 @@ export default function Home() {
     }
 
     return (
-        <div className='flex flex-col desktop:gap-10 gap-6'>
+        <div className='flex flex-col desktop:gap-20 gap-10'>
             <div className='bg-no-repeat desktop:aspect-auto bg-qf-brown desktop:h-[70vh] aspect-video w-full' style={splashImgStyle}>
                 <PageBlock
                     outerCls='h-full'
