@@ -5,7 +5,7 @@ export const mainFeatures = [
             url: 'thumbnails/hunt_thumb.jpg',
         },
         titleText: 'hunt',
-        bodyText: 'Hunt pheasant, chukar, and quail on guided hunts across our seventy acre field.',
+        bodyText: 'Hunt pheasant, chukar, and quail on guided hunts.',
         to: '/hunt',
     },
     {
