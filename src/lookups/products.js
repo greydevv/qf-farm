@@ -63,7 +63,7 @@ export const shopPackages = {
                     alt: '',
                     url: 'shop/merch/hoodie.jpg',
                 },
-                to: makeMerchLink('Quill Feather Hoodie', 3),
+                to: makeMerchLink('Quill Feather Hoodie'),
             },
             {
                 title: 'SHORT-SLEEVE T-SHIRT',
@@ -74,7 +74,62 @@ export const shopPackages = {
                     alt: '',
                     url: 'shop/merch/t_shirt.jpg',
                 },
-                to: makeMerchLink('Quill Feather Hoodie', 3),
+                to: makeMerchLink('Short-Sleeve T-Shirt'),
+            },
+            {
+                title: 'QUILL FEATHER T-SHIRT',
+                desc: 'Color: "Gravel". This color is slightly darker than our "Silver" option. Materials include cotton/polyester.',
+                price: 20,
+                disclaimer: 'Color may vary from photo. Pricing does not include shipping • US shipping only.',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/t_shirt_gravel.jpg',
+                },
+                to: makeMerchLink('Quill Feather T-Shirt: Gravel'),
+            },
+            {
+                title: 'QUILL FEATHER T-SHIRT',
+                desc: 'Color: "Silver". This color is slightly lighter than our "Gravel" option. Materials include cotton/polyester.',
+                price: 20,
+                disclaimer: 'Color may vary from photo. Pricing does not include shipping • US shipping only.',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/t_shirt_silver.jpg',
+                },
+                to: makeMerchLink('Quill Feather T-Shirt: Silver'),
+            },
+            {
+                title: 'QUILL FEATHER T-SHIRT',
+                desc: 'Color: "Tan". Materials include cotton/polyester.',
+                price: 20,
+                disclaimer: 'Color may vary from photo. Pricing does not include shipping • US shipping only.',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/t_shirt_tan.jpg',
+                },
+                to: makeMerchLink('Quill Feather T-Shirt: Tan'),
+            },
+            {
+                title: 'QUILL FEATHER T-SHIRT',
+                desc: 'Color: "Safety Orange". Materials include cotton/polyester.',
+                price: 20,
+                disclaimer: 'Color may vary from photo. Pricing does not include shipping • US shipping only.',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/t_shirt_safety_orange.jpg',
+                },
+                to: makeMerchLink('Quill Feather T-Shirt: Safety Orange'),
+            },
+            {
+                title: 'QUILL FEATHER T-SHIRT',
+                desc: 'Color: "Carolina Blue". Materials include cotton/polyester.',
+                price: 20,
+                disclaimer: 'Color may vary from photo. Pricing does not include shipping • US shipping only.',
+                imgObj: {
+                    alt: '',
+                    url: 'shop/merch/t_shirt_carolina_blue.jpg',
+                },
+                to: makeMerchLink('Quill Feather T-Shirt: Carolina Blue'),
             },
         ]
     },
