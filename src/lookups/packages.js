@@ -54,7 +54,8 @@ export const trainingPackages = {
             {
                 title: 'FOUNDATION OBEDIENCE - GUN DOG STYLE',
                 desc: 'In the field, your level of success will be determined by the efforts you first put into establishing a foundation of obedience. This 4-week course is uniquely designed to help you set this foundation and show you how to implement it in the world of the active gun dog. We will also cover the importance of body language, eye contact, touch, posture, and more. All of these will help you create the foundation necessary to <span>build a better gun dog.</span>',
-                price: 100,
+                benefit: 'Includes FREE T-Shirt.',
+                price: 150,
                 imgObj: {
                     alt: '',
                     url: 'train/packages/foundation_obedience.jpg',
