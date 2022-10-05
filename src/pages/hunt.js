@@ -40,7 +40,7 @@ export default function Hunts() {
         body: encodeURIComponent("I'm interested in joining the waiting list for your upland hunts! Please notify me when more information is available.\n\n\nName: \nPhone: ")
     }
 
-    const mailTo = `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+    const mailTo = `mailto:info@quillfeatherfarm.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 
     return (
         <div className='desktop:pt-10 pt-0 flex flex-col desktop:gap-20 gap-10'>

@@ -3,7 +3,7 @@ const makeShopLink = (name, printNum) => {
         subject: `${name}: Purchase`,
         body: encodeURIComponent(`I'm interested in purchasing the ${name} print #${printNum}! Please let me know how to proceed with payment.\n\n\nName: \nPhone: `)
     }
-    return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+    return `mailto:info@quillfeatherfarm.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 }
 
 const makeMerchLink = (name) => {
@@ -11,7 +11,7 @@ const makeMerchLink = (name) => {
         subject: `${name}: Purchase`,
         body: encodeURIComponent(`I'm interested in purchasing the ${name}! Please let me know how to proceed with payment.\n\n\nSize: \nName: \nPhone: `)
     }
-    return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+    return `mailto:info@quillfeatherfarm.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 }
 
 export const shopPackages = {
@@ -141,7 +141,7 @@ export const shopPackages = {
                 disclaimer: 'Pricing varies, starting at $200',
                 price: 200,
                 buyText: 'CONTACT',
-                to: `mailto:quillfeatherfarm@gmail.com?subject=${encodeURIComponent("Portrait Commission")}&body=${encodeURIComponent("I'm interested in getting a commission done! Please send me some more information.\n\n\nName: \nPhone: ")}`
+                to: `mailto:info@quillfeatherfarm.com?subject=${encodeURIComponent("Portrait Commission")}&body=${encodeURIComponent("I'm interested in getting a commission done! Please send me some more information.\n\n\nName: \nPhone: ")}`
             },
         ],
         examples: [

@@ -3,7 +3,7 @@ const makePackageLink = (name, verbiage) => {
         subject: `${name}: Sign Up`,
         body: encodeURIComponent(`I'm interested in signing up for ${verbiage}! Please send me more information.\n\n\nName: \nPhone: `)
     }
-    return `mailto:quillfeatherfarm@gmail.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
+    return `mailto:info@quillfeatherfarm.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 }
 
 const weekendWarriorPackage = {

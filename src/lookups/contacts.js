@@ -9,7 +9,7 @@ export const contactInfo = [
         icon: <LocalPhoneIcon className='text-qf-black' />,
     },
     {
-        handle: 'quillfeatherfarm@gmail.com',
+        handle: 'info@quillfeatherfarm.com',
         icon: <EmailIcon className='text-qf-black' />,
     },
     {
