@@ -1,7 +1,7 @@
 module.exports = {
     images: {
         domains: [
-            'cdn.quillfeatherfarm.com.s3-website-us-east-1.amazonaws.com'
+            'https://d1z5t0co8r7fc4.cloudfront.net/'
         ],
     },
 }
