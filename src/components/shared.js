@@ -24,7 +24,7 @@ export function QfInput({ className, errors, placeholder, ...rest }) {
 }
 
 export function QfButton({ className, disabled, children, ...rest }) {
-    let baseCls = 'bg-qf-brown rounded text-qf-white text-center font-1 py-4'
+    let baseCls = 'bg-qf-brown rounded text-qf-white text-center font-1 py-4 px-6'
     if (disabled) {
         baseCls += ' opacity-20'
     }

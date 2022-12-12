@@ -2,6 +2,7 @@ import LinkButton from 'components/LinkButton'
 import PageHero from 'components/PageHero'
 import { huntPhotos } from 'lookups/hunt_photos.js'
 import PageBlock from 'components/PageBlock'
+import { QfButton } from 'components/shared'
 
 function MasonryCollage({ set }) {
     // split image set in half
@@ -36,31 +37,30 @@ function MasonryCollage({ set }) {
 
 export default function Hunts() {
     const mailToObj = {
-        subject: 'Upland Hunts: Join Waiting List',
-        body: encodeURIComponent("I'm interested in joining the waiting list for your upland hunts! Please notify me when more information is available.\n\n\nName: \nPhone: ")
+      subject: 'Upland Hunts: Join Waiting List',
+      body: encodeURIComponent("I'm interested in joining the waiting list for your upland hunts! Please notify me when more information is available.\n\n\nName: \nPhone: ")
     }
 
     const mailTo = `mailto:info@quillfeatherfarm.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 
     return (
         <div className='desktop:pt-10 pt-0 flex flex-col desktop:gap-20 gap-10'>
-            <PageHero
-                headerText='HUNT'
-                bodyText='We are working diligently to create a unique upland experience for individuals, groups, and small corporate outings. Please check back regularly…or click the link below to join our waiting list and be the first to get notified when booking hunts is available!'
-                imgObj={ {alt: 'pheasants after upland hunt', url: 'hunt/hunt_hero.jpg'} }
-                comingSoonText='COMING FALL 2022'
-            >
-                <LinkButton
-                    href={ mailTo }
-                    text='JOIN WAITING LIST'
-                    className='bg-qf-dark-brown'
-                />
-            </PageHero>
-            <PageBlock
-                outerCls='desktop:py-24 py-16 bg-qf-dark-brown'
-            >
-                <MasonryCollage set={ huntPhotos }  />
-            </PageBlock>
+          <PageHero
+            headerText='HUNT'
+            bodyText='NEW BODY TEXT'
+            imgObj={ {alt: 'pheasants after upland hunt', url: 'hunt/hunt_hero.jpg'} }
+          >
+            <LinkButton
+              href={ "/hunt/build" }
+              text='BOOK A HUNT'
+              className='bg-qf-dark-brown'
+            />
+          </PageHero>
+          <PageBlock
+            outerCls='desktop:py-24 py-16 bg-qf-dark-brown'
+          >
+            <MasonryCollage set={ huntPhotos }  />
+          </PageBlock>
         </div>
     )
 }
