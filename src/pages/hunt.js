@@ -79,6 +79,9 @@ export default function Hunts() {
 
     const mailTo = `mailto:info@quillfeatherfarm.com?subject=${mailToObj.subject}&body=${mailToObj.body}`
 
+    const customPkgMailTo = `mailto:info@quillfeatherfarm.com?subject=Book Custom Quill Feather Experience`
+    const quintPkgMailTo = `mailto:info@quillfeatherfarm.com?subject=Book Quintessential Quill Feather Experience`
+
     return (
         <div className='desktop:pt-10 pt-0 desktop:pb-20 pb-5 flex flex-col desktop:gap-20 gap-10'>
             <PageHero
@@ -111,8 +114,9 @@ export default function Hunts() {
                       )
                     })}
                   </div>
+                  <p><Link href={ quintPkgMailTo } className="text-base">Contact us</Link> to book the quintessential experience.</p>
                 </div>
-                <p><span className='font-medium'>Custom Quill Feather Experience:</span> Want something different? Custom-built packages are available. Please let us know what you’re interested in and we’ll get back to you with a quote.</p>
+                <p><span className='font-medium'>Custom Quill Feather Experience:</span> Want something different? Custom-built packages are available. <Link href={ customPkgMailTo } className="text-base">Please let us know</Link> what you’re interested in and we’ll get back to you with a quote.</p>
               </div>
               <div>
                 <h2 className='text-qf-black mb-4'>ADD-ONS</h2>
