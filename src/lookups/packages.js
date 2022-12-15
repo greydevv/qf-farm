@@ -1,3 +1,38 @@
+export const addOns = [
+  {
+    title: "clays",
+    desc: "Our electronic remote-activated wobble trap will provide the perfect opportunity to warm up your gun prior to your hunt. Jut bring your own factory-made shells. Available in rounds of 50 clays.",
+  },
+  {
+    title: "food",
+    desc: "As part of our plan to make this a unique experience, we have partnered with a local company to make charcuterie boards and food/drink trays. These will be freshly-made and expertly crafted specifically for your group and can be enjoyed before, during, or after your hunt. Please let us know if you would like to add a board to your hunt!",
+  },
+  {
+    title: "drinks",
+    desc: "Make-your-own coffee and hot chocolate, and bottled water and will be available at no additional charge. Of course, you may also bring your own beverages.",
+  },
+  {
+    title: "apparel",
+    desc: "We have Quill Feather branded sweatshirts and t-shirts in a variety of colors and adult sizes S through 3XL. Due to “global supply chain” issues, our inventory is quite random!",
+  },
+  {
+    title: "bird cleaning",
+    desc: "If you like, after your hunt, we will clean and bag the birds that you harvested. They will be whole breasted, bagged, and tagged.",
+  }
+]
+
+export const qfExpPkg = [
+  "18 pheasants",
+  "18 chukar",
+  "Guides and dogs*",
+  "100 clays at the wobble trap",
+  "Shotgun Sunrise Breakfast Board (served upon arrival)",
+  "Huntsman Board (served during lunch break)",
+  "4 Quill Feather branded sweatshirts",
+  "Coffee, hot chocolate, bottled water",
+  "Use of heated luxury camper to warm up, socialize, and enjoy delicious and freshly-made food trays",
+]
+
 const makePackageLink = (name, verbiage) => {
     const mailToObj = {
         subject: `${name}: Sign Up`,

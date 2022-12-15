@@ -22,9 +22,12 @@ export default function PageHero({ headerText, bodyText, reminderText, imgObj, c
                         }
                     </div>
                     { bodyText && 
-                        <p className='max-w-body'>
-                            { bodyText }
-                        </p>
+                      <div className='max-w-body'>
+                        { typeof bodyText === "string"
+                            ? <p>{ bodyText }</p>
+                            : <>{ bodyText }</>
+                        }
+                      </div>
                     }
                 </div>
                 <div>
