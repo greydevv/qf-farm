@@ -21,10 +21,8 @@ function NavItem({ href, text, isActive }) {
     }
 
     return (
-        <Link href={ href } >
-            <a className={ makeClsName() }>
-                { text.toUpperCase() }
-            </a>
+        <Link href={ href } className={ makeClsName() }>
+          { text.toUpperCase() }
         </Link>
     )
 }
@@ -108,10 +106,8 @@ export function Navbar() {
                 outerCls='h-full'
                 innerCls='h-full flex items-center justify-between'
             >
-                <Link href='/'>
-                    <a className='w-[60px] h-[60px] text-qf-light-brown'>
-                        <Logo />
-                    </a>
+                <Link href='/' className='w-[60px] h-[60px] text-qf-light-brown'>
+                  <Logo />
                 </Link>
                 <button className='desktop:hidden fill-qf-light-brown text-left font-bold text-lg' onClick={ toggleMenu }>
                     { menuOpen 

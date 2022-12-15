@@ -19,7 +19,7 @@ function TrainPackage({ pkg }) {
             <div className='flex justify-between w-full mt-8'>
                 { pkg.moreTo &&
                     <Link href={ pkg.moreTo }>
-                        <a>LEARN MORE</a>
+                        LEARN MORE
                     </Link>
                 }
                 <div className='flex gap-x-2 items-center'>

@@ -12,11 +12,11 @@ export default function Footer() {
             </h2>
             <div className='flex desktop:flex-row flex-col desktop:gap-6 gap-1'>
                 { navLinks.map(({href, text}, i) => {
-                    return (
-                        <Link key={ i } href={ href }>
-                            <a className='qf__body text-qf-light-brown font-xs font-medium'>{ text }</a>
-                        </Link>
-                    )
+                  return (
+                    <Link key={ i } href={ href } className='qf__body text-qf-light-brown font-xs font-medium'>
+                      { text }
+                    </Link>
+                  )
                 })}
             </div>
         </PageBlock>
